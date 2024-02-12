@@ -5,8 +5,18 @@ import ProfileScreen from './ProfileScreen';
 
 const AppNavigator = createStackNavigator(
   {
-    Home: HomeScreen,
-    Profile: ProfileScreen,
+    Home: {
+      screen: HomeScreen,
+      navigationOptions: {
+        headerShown: false,
+      },
+    },
+    Profile: {
+      screen: ProfileScreen,
+      navigationOptions: {
+        headerShown: false,
+      },
+    },
   },
   {
     initialRouteName: 'Home',
