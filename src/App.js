@@ -1,5 +1,5 @@
 import './App.css';
-import { LoadingPage } from './containers';
+import { LoadingPage, SignupPage } from './containers';
 
 
 function App() {
@@ -7,6 +7,10 @@ function App() {
     <div className="App">
       <LoadingPage/>
     </div>
+    <div className="App">
+      <SignupPage/>
+    </div>
+    
   );
 }
 

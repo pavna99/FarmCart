@@ -1,6 +1,6 @@
 import React from 'react'
-import logo from './Images/logo.png';
-import heroimg from './Images/Hero Image.png';
+import logo from '../../Images/logo.png';
+import heroimg from '../../Images/Hero Image.png';
 
 function LoadingPage() {
   return (
