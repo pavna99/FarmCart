@@ -1,12 +1,15 @@
 .App {
   text-align: center;
   background-color: #7519EB;
-  background-image: url(./Images/Background.png);
+  background-image: url(./Images/Group\ 6\ \(3\).png);
+  background-size: 90%;
+  background-repeat: no-repeat;
+  
   background-position:center;
-  max-width: 350px;
+  width: 100%;
   height: 100%;
   margin: 0 ;
-  padding: 20px; 
+   
   border-radius: 10px; 
 }
 .logo {
@@ -16,7 +19,7 @@
   color: white;
 }
 .heroimage{
-  max-width: 350px;
+ width: 100%;
   
 }
 .getbutton{
