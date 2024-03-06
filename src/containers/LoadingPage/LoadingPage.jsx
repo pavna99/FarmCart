@@ -9,7 +9,7 @@ function LoadingPage() {
         <h1 className="herotext">Farm fresh for all</h1>
         <img src={heroimg} className="heroimage" alt="main" />
         <div className="getbutton">
-        <p>Get Started</p>
+          <p>Get Started</p>
 
         </div>
     </div>

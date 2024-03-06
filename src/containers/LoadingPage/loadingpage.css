@@ -4,12 +4,12 @@
     background-image: url(./Images/Group\ 6\ \(3\).png);
     background-size: 90%;
     background-repeat: no-repeat;
-    
+    padding: 20px;
     background-position:center;
     width: 100%;
     height: 100%;
     margin: 0 ;
-     
+    align-items: center;
     border-radius: 10px; 
 }
 
@@ -24,6 +24,7 @@
     
   }
   .getbutton{
+    width:250px;
     background-color: #0BCE83;
     color:white;
   }
