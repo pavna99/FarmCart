@@ -1,17 +1,22 @@
 import './App.css';
-import { LoadingPage, SignupPage } from './containers';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { IntroPage, LoadingPage, SignupPage } from './containers';
 
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <LoadingPage/>
-    </div>
-    <div className="App">
-      <SignupPage/>
-    </div>
-    
+    <Router>
+      <Routes>
+        <Route path="/" exact element={<LoadingPage />} />
+        <Route path="/loading" exact element={<IntroPage />} />
+        <Route path="/signup" exact element={<SignupPage />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
+
+

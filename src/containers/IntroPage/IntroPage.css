@@ -1,0 +1,15 @@
+.Intropage{
+    text-align: center;
+    
+
+    width: 50%;
+    height: 90%;
+    margin: 0 ;
+    align-items: center;
+    border-radius: 20px; 
+}
+.Main{
+    height:100px;
+    width:10px;
+
+}
