@@ -1,8 +1,8 @@
-.IntroPage{
+.SecondPage{
     margin: 0;
     padding: 0;
-    background-image: url(../../Images/card.svg);
-    background-size: cover;
+    background-image: url(../../Images/card2.png);
+    background-size: contain;
     background-repeat: no-repeat;
      
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import './IntroPage.css';
-import card1 from '../../Images/card.svg'; 
+
 import { Link } from 'react-router-dom';
 
 function IntroPage() {
@@ -8,14 +8,14 @@ function IntroPage() {
     <div className='IntroPage'>
        <div className="card-container">
             <div className='onetext'>
-              <h2 style={{color:'#7519EB'}}>FARM FRESH FOR <br></br>ALL</h2>
-              We love to solve sfreal world problems with design solutions that are magically simple and useable. 
+              <h2 className='title'>FARM FRESH  <br></br>FOR ALL .</h2>
+              We love to solve sfreal world problems with design solutions that are magically<br></br> simple and useable. 
             </div>
-          
-      </div>
-       <Link to="/signup">
+        </div>
+
+       <Link to="/second">
           <div className="getbutton">
-            <p>hohosignup</p>
+            <p>SECOND PAGE</p>
           </div>
         </Link>
        
