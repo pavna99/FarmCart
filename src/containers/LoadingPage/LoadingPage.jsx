@@ -7,14 +7,15 @@ import "./loadingpage.css"
 function LoadingPage() {
   return (
     <div className='Loadingpage'>
-        <img src={logo} className="logo" alt="logo" />
-        <h1 className="herotext">Farm fresh for all</h1>
-        <img src={heroimg} className="heroimage" alt="main" />
-        <Link to="/loading">
-          <div className="getbutton">
-            <p>Get Started</p>
-          </div>
-        </Link>
+      <div className='loadingbox'>
+          <div className="herotext">Farm fresh for all</div>
+
+          <Link to="/loading">
+            <div className="getbutton">
+              Get Started
+            </div>
+          </Link>
+        </div>
     </div>
   )
 }

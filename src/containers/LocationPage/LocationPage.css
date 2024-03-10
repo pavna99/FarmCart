@@ -3,7 +3,7 @@
     flex-direction: column;
     margin: 0;
     padding: 0;
-    height: 90vh;
+    height: 100vh;
     background-image: url(../../Images/Background2.svg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -15,7 +15,7 @@
     width: 100%;
     align-items: center;
     text-align: center;
-    
+    margin-bottom: 50px;
     
 }
 .Sharelocation{
@@ -23,6 +23,7 @@
     font-size: 30px;
     font-weight: bold;
     padding:  0px 50px 0px 50px;
+    
 }
 .Locationdesc{
     

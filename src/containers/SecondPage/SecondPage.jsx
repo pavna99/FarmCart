@@ -7,16 +7,16 @@ function SecondPage(){
     return (  
         <div className='SecondPage'>
            <div className="card-container">
-                <div className='onetext'>
+                <div className='twotext'>
                   <h2 className='title'>FARM FRESH  <br></br>FOR ALL .</h2>
-                  We love to solve sfreal world problems with design solutions that are magically<br></br> simple and useable. 
+                  We love to solve sfreal world problems with design solutions that are magically simple and useable. 
                 </div>
             </div>
     
            <Link to="/signup">
-              <div className="getbutton">
+              
                 <p>Third Page</p>
-              </div>
+              
             </Link>
            
         </div>
