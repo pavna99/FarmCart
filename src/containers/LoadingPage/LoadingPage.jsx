@@ -8,7 +8,7 @@ function LoadingPage() {
   return (
     <div className='Loadingpage'>
       <div className='loadingbox'>
-          <div className="herotext">Farm fresh for all</div>
+          <div className="herotext">Farm fresh <br></br>for all</div>
 
           <Link to="/loading">
             <div className="getbutton">
