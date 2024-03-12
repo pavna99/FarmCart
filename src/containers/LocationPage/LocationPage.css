@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     height: 100vh;
-    background-image: url(../../Images/Background2.svg);
+    background-image: url(../../Images/Background2.png);
     background-size: cover;
     background-repeat: no-repeat;
     justify-content:flex-end;
@@ -26,14 +26,15 @@
     
 }
 .Locationdesc{
-    
+    line-height: 1.5;
     color:#868686;
+    font-size: 18px;
     padding: 20px 50px 20px 50px;
 }
 .continuebutton{
-    
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-top: 20px;
+    margin-left: 35px;
+    margin-right: 35px;
     color: #FFFFFF;
     font-weight: bold;
     background-color: #0BCE83;
@@ -42,7 +43,7 @@
 }
 .Nomessage{
     color:#0BCE83;
-    font-weight: bolder;
+    font-weight: bold;
     margin-top: 25px;
     margin-bottom: 35px;
 }
