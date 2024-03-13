@@ -4,7 +4,7 @@ import './SignupPage.css'
 
 function SignupPage() {
   return (
-    <div className='signup-page-container'>
+    <div className='signup-login-page-container'>
       <div className='header-section'>
         <h2 style={{'font-size':'xx-large', 'paddingBottom':10, 'fontWeight':'semibold'}}>Sign Up</h2>
         <p style={{'font-size':'small', 'fontWeight':'200'}}>Please sign up to get started</p>
