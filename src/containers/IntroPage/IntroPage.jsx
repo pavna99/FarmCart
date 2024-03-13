@@ -32,18 +32,18 @@ function IntroPage() {
   const slides = [
     {
       img: bgimg1,
-      title: 'FARM FRESH FOR ALL .',
-      text: 'We love to solve real world problems with design solutions that are magically simple and useable.',
+      title: 'Know Your Farmer, Know Your Food.',
+      text: 'At Farm Cart, we prioritize trust and transparency between farmers and consumers. Our platform offers farm profiles with a farmers story, growing practices, and certifications, allowing informed decisions about food origin. You can read reviews from other customers for insights into the quality and freshness of each farm. Additionally, you can communicate with farmers directly for a personalized shopping experience.',
     },
     {
       img: bgimg2,
-      title: 'ORGANIC AND HEALTHY',
-      text: 'Discover the best organic products sourced directly from farms.',
+      title: 'Convenience Meets Freshness',
+      text: 'At Farm Cart, we understand that busy lives shouldnt mean sacrificing healthy eating. Thats why we have built a platform that makes buying fresh, organic produce effortless.Farm Cart connects you directly with nearby organic farms and markets. Find the freshest, seasonal produce with just a tap, ensuring healthy eating made convenient and local.',
     },
     {
       img: bgimg3,
-      title: 'SUSTAINABLE FARMING',
-      text: 'Join us in our journey towards sustainability and greener future.',
+      title: 'From Farm to Table',
+      text: 'Farm Cart supports local farmers by connecting them with health-conscious consumers seeking fresh produce. Farmers can create a profile, list their products, manage inventory and set prices with ease. Expand your market reach beyond local farmers  markets and traditional channels with Farm Cart.'
     },
   ];
   return (  
