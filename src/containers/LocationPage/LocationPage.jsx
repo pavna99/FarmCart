@@ -14,7 +14,7 @@ function LocationPage() {
                 </br>provide the nearest farms and delivery points so as to ease your distance.
                 </div>
                 <div className='continuebutton'>
-                    <Link to="/login">
+                    <Link to="/dashboard">
                     Continue
                     </Link>
                 </div>

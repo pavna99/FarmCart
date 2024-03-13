@@ -1,21 +1,23 @@
 import React from 'react'
 import logo from '../../Images/logo.png';
 import heroimg from '../../Images/Hero Image.png';
+import background from '../../Images/Backgroundlogo.png'; 
 import { Link } from 'react-router-dom';
 import "./loadingpage.css"
 
 function LoadingPage() {
   return (
     <div className='Loadingpage'>
-      <div className='loadingbox'>
-          <div className="herotext">Farm fresh <br></br>for all</div>
+      <img className='bg-img' src={background} alt="bg-img" />
+      <img className='logo-img' src={logo} alt="logo-img" />
 
-          <Link to="/introduction">
-            <div className="getbutton">
-              Get Started
-            </div>
-          </Link>
-        </div>
+      <h1 className="herotext">Farm fresh <br></br>for all</h1>
+      <img className='heroimage' src={heroimg} alt="" />
+      <div className="getbutton">
+        <Link to="/introduction">
+          Get Started
+        </Link>
+      </div>
     </div>
   )
 }
