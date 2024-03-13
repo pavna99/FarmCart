@@ -1,4 +1,33 @@
 .product-component-ovrerall{
     height: 100vh;
-    overflow: scroll;
+    
+    
+}
+.minicard{
+    text-align: center;
+    background-color: transparent;
+}
+.Textbody{
+    height: fit-content;
+    width:145px;
+    height: 50%;
+    bottom: 0;
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    padding-bottom: 25px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.banana{
+    margin-top :-40%;
+    
+}
+.name{
+    color:#000000;
+    font-weight: bold;
+}
+.inr{
+    color:#7519EB;
+    font-weight: 600;
+    padding-top: 10px;
 }
