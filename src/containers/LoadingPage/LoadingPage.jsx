@@ -10,7 +10,7 @@ function LoadingPage() {
       <div className='loadingbox'>
           <div className="herotext">Farm fresh <br></br>for all</div>
 
-          <Link to="/loading">
+          <Link to="/introduction">
             <div className="getbutton">
               Get Started
             </div>

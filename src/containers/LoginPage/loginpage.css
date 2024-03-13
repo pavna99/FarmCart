@@ -1,4 +1,4 @@
-.signup-page-container{
+.login-page-container{
     padding: 0;
     margin: 0;
     background-image: url("../../Images/commonbg.png");
@@ -52,6 +52,13 @@
     background-color: #FFF;
     margin: 3px 0 15px 10%;
 
+}
+
+.checkbox{
+    margin: 5px 0 0 10%;
+    padding: 10px 0 0 0 ;
+    background-color:#F6F5F5 ;
+    border: none;
 }
 
 .submitbtn{
