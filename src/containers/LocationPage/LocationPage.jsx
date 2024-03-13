@@ -1,5 +1,6 @@
 import React from 'react';
 import './LocationPage.css';
+import { Link } from 'react-router-dom';
 function LocationPage() {
     return (
         <div className='LocationPage'>
@@ -13,7 +14,9 @@ function LocationPage() {
                 </br>provide the nearest farms and delivery points so as to ease your distance.
                 </div>
                 <div className='continuebutton'>
+                    <Link to="/login">
                     Continue
+                    </Link>
                 </div>
                 <div className='Nomessage'>
                      No, Choose location manually
