@@ -2,6 +2,8 @@
 :root{
     margin: 0;
     padding: 0;
+    max-width: 450px;
+    margin: 0 auto;
 }
 
 *{
