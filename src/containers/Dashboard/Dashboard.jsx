@@ -26,9 +26,6 @@ function Dashboard() {
           
       </div>
       
-      
-      
-      
       <DashboardComponent/>
       <Navbar/>
       </div>

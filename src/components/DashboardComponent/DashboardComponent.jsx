@@ -1,6 +1,7 @@
 import React from 'react';
 import './DashboardComponent.css';
 import  {useState,useEffect} from 'react'
+import {Link} from 'react-router-dom';
 import ProductComponent from '../ProductComponent/ProductComponent';
 
     const DashboardComponent = () => {
@@ -35,8 +36,10 @@ import ProductComponent from '../ProductComponent/ProductComponent';
                 Exotic
             </div>
         </div>
-
-      <div className='seemore'> see more</div>
+        <Link to="/seemore">
+            <div className='seemore'> see more</div>
+        </Link>
+      
 
 
       <div className="content">

@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { IntroPage, LoadingPage, SignupPage,LocationPage, LoginPage, Dashboard } from './containers';
+import { IntroPage, LoadingPage, SignupPage,LocationPage, LoginPage, Dashboard,Seemore} from './containers';
 
 
 const App = () => {
@@ -14,6 +14,7 @@ const App = () => {
         <Route path="/login" exact element={<LoginPage />} />
         <Route path="/location" exact element={<LocationPage/>} />
         <Route path="/dashboard" exact element={<Dashboard/>} />
+        <Route path="/seemore" exact element={<Seemore/>} />
       </Routes>
     </Router>
   );
