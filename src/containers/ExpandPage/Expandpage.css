@@ -1,0 +1,27 @@
+.expand-overall-container{
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-image: url('../../Images/whitecommonbg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+.images3{
+    margin-left: 18px;
+    object-fit: cover;
+}
+.popdiv {
+    height: 40%;
+    width: 100%;
+    margin-top: 10;
+    padding: 10%;
+    background-color: #ffffff;
+    bottom:10%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;  
+  }
+.images4{
+    margin-top: 20px;
+}
