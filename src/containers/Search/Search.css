@@ -18,28 +18,28 @@
         
         
 }
-.search-box2 {
-    /* display: flex;
-    flex-direction: row-reverse; */
+.search-box3 {
+    
     margin-top: 13%;
     margin-left: 54%;
     transform: translate(-50%, -50%);
-     background: #FFFFFF; 
+    background: #FFFFFF;
     height: 30px;
     border-radius: 40px;
     padding: 12px;
     
   }
-   .search-box2:hover > .search-box2{
+   .search-box3:hover > .search-box3{
     background: #FFFFFF;
+    width:40%;
   }
-  .search-box2:hover > .search-text2{
+  .search-box3:hover > .search-text2{
     width: 200px;
     padding: 0;
     
   }
   
-  .search-box2:hover > .search-btn2{
+  .search-box3:hover > .search-btn2{
     
     color: black;
     
@@ -78,21 +78,31 @@
     width: 0px;
     
   }
-  .Productlist{
-    height:68%;
-    overflow: scroll;
-  }
-  .Productlist::-webkit-scrollbar {
-    display: none; 
-  }
-  
-  .Productcompset2{
-    display:flex;
-    flex-direction: row;
-    width: 100%;
-  }
 
-  .Productbox{
-    margin-top: 35px;
-    padding:10px;
-  }
+.frequent-searches,
+.recent-searches {
+    display: none;
+    
+    width: 100%; 
+   
+    border-radius: 5px;
+    padding: 0px;
+}
+.searchtext{
+    color: #7519EB;
+}
+.mini-card-row {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start; 
+    
+}
+.search-box3:hover .recent-searches {
+    display: block;
+    margin-top: 20%;
+}
+
+.search-box3:hover .frequent-searches{
+    display: block;
+    margin-top: 20px;
+}
