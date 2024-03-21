@@ -1,0 +1,63 @@
+
+.Section1{
+    margin:50px 0;
+}
+.Tileset{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    
+    color:#555555;
+    gap:12%;
+  }
+  
+  #he1{
+    
+    
+    font-size: 20px;
+  }
+  #he1:hover{
+    color: #7519EB; 
+  }
+  .selected {
+    border-bottom: 3px solid #7519EB;
+    line-height: 2; 
+
+    color: #7519EB; 
+  }
+  .fruits2 {
+    margin-left: 35px;
+  }
+  .fruits3 {
+    margin-left: 35px;
+  }
+  .underline{
+    background-color: #7519EB;
+    width:80px;
+    height: 3px;
+    border-radius: 4px;
+    margin-left: 25px;
+    margin-top: 10px;
+  }
+  .seemore{
+    display: flex;
+    color: #7519EB;
+padding-right: 15%;
+    flex-direction: row-reverse;
+    margin-top: 20px;
+  }
+  .Productcompset{
+    display:flex;
+    overflow: scroll;
+    width: 100%;
+  }
+
+  .Productcompset::-webkit-scrollbar {
+    display: none; 
+  }
+  .Productbox{
+    height: 200px;
+    margin-top: 50px;
+    padding:10px;
+  }
