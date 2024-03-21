@@ -69,7 +69,7 @@ function IntroPage() {
             </div>
             <div className={`popupdiv popupdiv-${index + 1}`}>
               <h2 className='title'>{slide.title}</h2>
-              <p>{slide.text}</p>
+              <p className='slidetext'>{slide.text}</p>
             </div>
           </div>
         </SwiperSlide>

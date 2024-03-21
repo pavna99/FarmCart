@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import './loginpage.css'
+import './LoginPage.css'
 
 function LoginPage() {
   return (

@@ -77,7 +77,9 @@
   opacity: 1; 
   background-color: #7519EB; 
 }
-
+.slidetext{
+  
+}
 .animate {
   animation: slideUp 1s forwards;
 }
@@ -90,4 +92,3 @@
     bottom: 0;
   }
 }
-  
