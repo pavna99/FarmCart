@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { IntroPage, LoadingPage, SignupPage,LocationPage, LoginPage, Dashboard,Seemore, Search,Expandpage} from './containers';
+import { IntroPage, LoadingPage, SignupPage,LocationPage, LoginPage, Dashboard,Seemore, SearchPage,Expandpage} from './containers';
 
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
         <Route path="/location" exact element={<LocationPage/>} />
         <Route path="/dashboard" exact element={<Dashboard/>} />
         <Route path="/seemore" exact element={<Seemore/>} />
-        <Route path="/search" exact element={<Search/>} />
+        <Route path="/search" exact element={<SearchPage/>} />
         <Route path="/expand" exact element={<Expandpage/>} />
       </Routes>
     </Router>
