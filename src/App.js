@@ -5,6 +5,7 @@ import { IntroPage, LoadingPage, SignupPage,LocationPage, LoginPage, Dashboard }
 import { AuthProvider } from './components/Auth/AuthContext';
 
 
+
 const App = () => {
   return (
     <AuthProvider>
@@ -19,6 +20,7 @@ const App = () => {
         </Routes>
       </Router>
     </AuthProvider>
+
   );
 };
 
