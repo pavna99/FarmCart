@@ -2,19 +2,14 @@ import React from 'react';
 import './Seemore.css';
 import cart from '../../Images/shopping-cart.svg';
 import bar from '../../Images/Bar.png';
-import { Navbar,ProductComponent} from '../../components'
+import { Navbar,ProductComponent, SearchBar} from '../../components'
+import { Link } from 'react-router-dom';
 function Seemore(props) {
     return (
         <div className='seemore-overall-container'>
             <div className='header2'>
                 <img className='images1' src={bar} alt="bars"/>
-                <div class = 'search-box2'>
-                    <div class = "search-btn2">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <input class = "search-text2" type="text" placeholder = "Search" />
-            
-                </div>
+                <SearchBar/>
                 <img className='images2' src={cart} alt="cart"/>
             </div>
             <div className='Productlist'>

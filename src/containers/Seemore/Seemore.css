@@ -14,9 +14,12 @@
         flex-direction: row;
         width: 80%;
         max-width: 450px;
-        padding:10% 10% ;
-        
-        
+        padding:7% 10% ;
+}
+
+.searchlinkdiv{
+  margin-top: 10%;
+  margin-left: 10%;
 }
 .search-box2 {
     display: flex;
