@@ -1,10 +1,7 @@
-.checkbox{
-    margin-left : 10%;
-    padding: 0;
+.checkbox1{
+    margin-left:10%;
 }
 
 .fplabel{
-    position: absolute;
-    right: 11%;
-    color: #0BCE83;
+    margin-left: 20%;
 }
