@@ -8,20 +8,58 @@
     background-size: cover;
     overflow-x: hidden;
 }
+
+.product-details-box{
+    display: flex;
+    flex-direction: row;
+    padding:10% 0% 10% 10%;
+}
+.productbox{
+    width:40%;
+    
+}
+.product-name{
+
+    font-size: 30px;
+    font-weight: 600;
+}
+.titlebox{
+    font-size: 20px;
+    margin-top: 10%;
+    color: rgba(32, 31, 32, 0.6);
+
+}
+.price{
+    color:blueviolet;
+    font-size: 18px;
+    font-weight: 500;
+}
+.quantity-entry{
+    display: flex;
+    flex-direction: row;
+}
 .images3{
-    margin-left: 18px;
-    object-fit: cover;
+    width:60%;
+    margin-right: 10%;
+}
+.certificate{
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    
+   
+}
+.certification{
+    font-size: 15px;
+    color: rgba(32, 31, 32, 0.6);
+    padding: 10px;
 }
 .popdiv {
     height: 40%;
     width: 100%;
-    margin-top: 10;
     padding: 10%;
+    margin-top:60%;
     background-color: #ffffff;
-    bottom:10%;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;  
   }
-.images4{
-    margin-top: 20px;
-}
