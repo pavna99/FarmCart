@@ -1,0 +1,35 @@
+.cart-overall-container{
+    height: 100vh;
+    background-color: #F6F5F5;
+    justify-content: center;
+    align-items: center;
+}
+.cartlist{
+    padding:8%;
+}
+.proimage{
+    width:138.965px;
+}
+.listitem{
+    display: flex;
+    
+}
+.deletebtn{
+    margin-left: 25px;
+}
+.quantitydesc{
+    display: flex;
+
+}
+.btn__container{
+   
+}
+.control__btn {
+    padding: 5px;
+    border-radius: 5.189px;
+    border: 0.865px solid #FFF;
+    background: #FFF;
+    box-shadow: 0.865px 1.73px 12.972px 0px rgba(32, 31, 32, 0.05);
+  }
+  
+

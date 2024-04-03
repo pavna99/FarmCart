@@ -9,6 +9,7 @@
     overflow-x: hidden;
 }
 .product-container{
+    height:30%
    
 }
 .product-details-box{
@@ -57,7 +58,7 @@
     padding: 10px;
 }
 .popdiv {
-    
+    height:40%;
     width: 100%;
     padding: 10%;
     background-color: #ffffff;

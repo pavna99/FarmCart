@@ -1,6 +1,6 @@
 import React from 'react';
 import './EmptyCart.css';
-import { Navbar, SearchBar} from '../../components';
+import { Navbar} from '../../components';
 import { Link } from 'react-router-dom';
 import cart from '../../Images/shopping-cart.svg';
 import bar from '../../Images/Bar.png';
@@ -19,7 +19,7 @@ function EmptyCart(props) {
                 <h5 className='waitmsg'>Add items to your cart, we are waiting!</h5>
             
             <button className='shopbtn' type="submit" 
-         ><Link to='/empty'>Start Shopping</Link>
+         ><Link to='/cart'>Start Shopping</Link>
          </button>
          <Navbar/>
          </div>
