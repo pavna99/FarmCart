@@ -5,7 +5,7 @@ import bar from '../../Images/Bar.png';
 import product from '../../Images/product.png';
 import farmer from '../../Images/farmerphoto.png';
 import { useState } from 'react';
-
+import { Link } from 'react-router-dom';
 import { Rating } from 'react-simple-star-rating';
 import { Navbar } from '../../components';
 function Expandpage(props) {
@@ -125,7 +125,7 @@ function Expandpage(props) {
                 
          </div>
          <button className='addtobtn' type="submit" 
-         >Add to Cart
+         ><Link to='/empty'>Add to Cart</Link>
          </button>
         </div>
         <Navbar/>
