@@ -5,7 +5,7 @@
     align-items: center;
 }
 .cartlist{
-    padding:8%;
+    padding:0% 6% 6% 6%;
 }
 .proimage{
     width:138.965px;
@@ -13,22 +13,43 @@
 .listitem{
     display: flex;
     
+    
+}
+.listitem2{
+    display: flex;
+    margin-top: 40px;
+    
+}
+.itemname{
+    font-size:larger;
+    font-weight: 700;
+}
+.itemprice{
+    margin-top: 8px;
+    color:#0BCE83;
 }
 .deletebtn{
-    margin-left: 25px;
+    margin-left: 20px;
 }
 .quantitydesc{
     display: flex;
+    color:#888;
+    margin-top: 8px;
 
 }
 .btn__container{
+   margin-top: 50px;
+   display: flex;
    
+   align-items: center;
 }
 .control__btn {
     padding: 5px;
     border-radius: 5.189px;
     border: 0.865px solid #FFF;
     background: #FFF;
+    margin-left: 10px;
+    margin-right: 10px;
     box-shadow: 0.865px 1.73px 12.972px 0px rgba(32, 31, 32, 0.05);
   }
   
