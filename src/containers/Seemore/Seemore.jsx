@@ -14,9 +14,11 @@ function Seemore(props) {
             </div>
             <div className='Productlist'>
                     <div className='Productcompset2'>
+                        <Link to='/expand'>
                         <div className='Productbox'>
                             <ProductComponent/>
                         </div>
+                        </Link>
                         <div className='Productbox'>
                             <ProductComponent/>
                         </div>
