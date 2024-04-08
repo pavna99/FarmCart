@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { IntroPage, LoadingPage, SignupPage,LocationPage, LoginPage, Dashboard, Seemore, SearchPage, Expandpage, EmptyCart, CartPage } from './containers';
+import { IntroPage, LoadingPage, SignupPage,LocationPage, LoginPage, Dashboard, Seemore, SearchPage, Expandpage, EmptyCart, CartPage,CheckoutPage } from './containers';
 import { AuthProvider } from './components/Auth/AuthContext';
 
 
@@ -22,6 +22,7 @@ const App = () => {
           <Route path="/expand" exact element={<Expandpage/>} />
           <Route path="/empty" exact element={<EmptyCart/>} />
           <Route path="/cart" exact element={<CartPage/>} />
+          <Route path="/checkout" exact element={<CheckoutPage/>}/>
         </Routes>
       </Router>
     </AuthProvider>
