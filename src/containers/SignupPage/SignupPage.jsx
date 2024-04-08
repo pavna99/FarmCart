@@ -66,7 +66,7 @@ function SignupPage() {
         {error && <div>{error}</div>}
         <button className='submitbtn' type="submit" >Sign Up</button>
         </form>
-        <p style={{'font-size':'medium', 'fontWeight':'300', 'textAlign':'center'}}>Already have an account? <Link to='/login'>login instead.</Link></p>
+        <p style={{'fontSize':'medium', 'fontWeight':'300', 'textAlign':'center'}}>Already have an account? <Link to='/login'>login instead.</Link></p>
         {showNotification && <NotificationPopup message="User created please login" onClose={() => setShowNotification(false)} />}</div>
     </div>
   )

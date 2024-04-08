@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link , useNavigate} from 'react-router-dom';
 import axios from 'axios';
-import './LoginPage.css'
+import './loginpage.css'
 
 function LoginPage() {
   const [data, setData] = useState({
@@ -41,8 +41,8 @@ function LoginPage() {
   return (
     <div className='signup-login-page-container'>
         <div className='header-section'>
-            <h2 style={{'font-size':'xx-large', 'paddingBottom':10, 'fontWeight':'semibold'}}>Log In</h2>
-            <p style={{'font-size':'small', 'fontWeight':'200'}}>Please sign in to your existing account</p>
+            <h2 style={{'fontsize':'xx-large', 'paddingBottom':10, 'fontWeight':'semibold'}}>Log In</h2>
+            <p style={{'fontsize':'small', 'fontWeight':'200'}}>Please sign in to your existing account</p>
         </div>
         <div className='form-container'>
             <form onSubmit={handleSubmit} method="POST"> 
@@ -56,7 +56,7 @@ function LoginPage() {
             {error && <div>{error}</div>} 
             <button className='submitbtn' type="submit" >Log In</button>
             </form> 
-            <p style={{'font-size':'medium', 'fontWeight':'300', 'textAlign':'center'}}>Don't have an account? <Link to='/signup'>Sign Up here.</Link></p>
+            <p style={{'fontsize':'medium', 'fontWeight':'300', 'textAlign':'center'}}>Don't have an account? <Link to='/signup'>Sign Up here.</Link></p>
         </div>
     </div>
   )
