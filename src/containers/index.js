@@ -9,3 +9,4 @@ export {default as SearchPage} from './SearchPage/SearchPage';
 export {default as Expandpage} from './ExpandPage/Expandpage';
 export {default as EmptyCart} from './EmptyCart/EmptyCart';
 export {default as CartPage} from './CartPage/CartPage';
+export {default as CheckoutPage} from './CheckoutPage/CheckoutPage';

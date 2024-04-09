@@ -32,8 +32,8 @@ function CartPage(props) {
                 <img className='images1' src={bar} alt="bars" />
                 <img className='images1' src={cart} alt="cart" />
             </div>
-            <div id="deleteBtn" className='cartlist'>
-                <div className='listitem'>
+            <div  className='cartlist'>
+                <div id="deleteBtn" className='listitem'>
                         <img  className="proimage" src={product} alt="image1"/>
                         <div className='itemdetails'>
                         <div className='itemname'>Bhutan Pomegranate</div>
@@ -124,10 +124,10 @@ function CartPage(props) {
                         </div>
                     </div>
                 
-            </div>
+            </div><Link to='/checkout'>
             <button className='checkbtn' type="submit" >
-                <Link to='/cart'>Checkout</Link>
-            </button>
+                Checkout
+            </button></Link>
             <Navbar/>
             
         </div>
