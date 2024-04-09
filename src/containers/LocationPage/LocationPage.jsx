@@ -1,52 +1,99 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './LocationPage.css';
-import { Link } from 'react-router-dom';
-import { useAuth } from '../../components/Auth/AuthContext';
-import { Geolocation } from '@capacitor/geolocation';
+import { Link , useNavigate} from 'react-router-dom';
+import { API_ENDPOINTS } from '../../components/Auth/apiConfig';  
 
 
 
 function LocationPage() {
-  const { accessToken, login, logout } = useAuth();
+  const navigate = useNavigate(); 
+  function getLocation() {
+    if ('geolocation' in navigator) {
+      navigator.geolocation.getCurrentPosition(
+        async (position) => {
+          const location_latitude = position.coords.latitude.toString();
+          const location_longitude = position.coords.longitude.toString();
+          const accessToken = localStorage.getItem('accessToken');
+          console.log(accessToken)
+          if (!accessToken) {
+            console.error('No access token available.');
+            return;
+          }
+  
+          const locationData = { location_latitude, location_longitude };
+          try {
+            const response = await fetch(`${API_ENDPOINTS.users}/location/`, {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Bearer ${accessToken}`
+              },
+              body: JSON.stringify(locationData)
+            });
+            if (response.ok) {
+              const result = await response.json();
+              console.log(result)
+              console.log('Location saved:', result);
+              navigate('/dashboard');
 
-  async function getLocation() {
-    try {
-        const position = await Geolocation.getCurrentPosition({
-            enableHighAccuracy: true,
-        });
-
-        alert(`Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`);
-    } catch (error) {
-        console.error('Error getting location:', error);
-        if (error.code === 'NOT_AUTHORIZED') {
-            alert('Location permission not granted');
-        } else {
-            alert('Error getting location: ' + error.message);
+            } else {
+              throw new Error('Failed to save location to the server');
+            }
+          } catch (error) {
+            console.error("Error saving location: ", error);
+            alert("Error saving location: " + error.message);
+          }
+        },
+        (error) => {
+          console.error("Error Code = " + error.code + " - " + error.message);
+          if (error.code === error.PERMISSION_DENIED) {
+            alert("Location permission was denied.");
+          } else {
+            alert("Error getting location: " + error.message);
+          }
+        },
+        {
+          enableHighAccuracy: true,
+          timeout: 5000,
+          maximumAge: 0
         }
+      );
+    } else {
+      alert('Geolocation is not supported by your browser.');
     }
-}
+  }
+  
 
-    return (
-        <div className='LocationPage'>
+  async function requestLocationPermission() {
+    try {
+      const permissionStatus = await navigator.permissions.query({ name: 'geolocation' });
+      return permissionStatus.state;
+    } catch (error) {
+      console.error("Error requesting location permission:", error);
+      throw error; 
+    }
+  }
 
-            <div className="locationbox">
-                <div className='Sharelocation'>
-                    Share your location
-                </div>
-                <div className='Locationdesc'>
-                    If we have your location, we can <br>
-                    </br>provide the nearest farms and delivery points so as to ease your distance.
-                </div>
-                <button className='continuebutton' onClick={getLocation}>Get Location</button>
-                <Link to = "/dashboard">
-                <div className='Nomessage'>
-                     No, Choose location manually
-                </div>
-                </Link>
-            </div>
+  return (
+      <div className='LocationPage'>
+          <div className="locationbox">
+              <div className='Sharelocation'>
+                  Share your location
+              </div>
+              <div className='Locationdesc'>
+              If we have your location, we can <br>
+              </br>provide the nearest farms and delivery points so as to ease your distance.
+              </div>
+              <button className='continuebutton' onClick={getLocation}>Get Location</button>
+              <Link to = "/dashboard">
+              <div className='Nomessage'>
+                    No, Choose location manually
+              </div>
+              </Link>
+          </div>
 
-        </div>
-    );
+      </div>
+  );
 }
 
 export default LocationPage;
@@ -72,46 +119,3 @@ export default LocationPage;
     //       alert('Geolocation is not supported by your browser.');
     //     }
     // };
-
-
-  //
-
-  // function getLocation() {
-  //     if ('geolocation' in navigator) {
-  //       requestLocationPermission().then(permissionStatus => {
-  //         if (permissionStatus === 'granted') {
-  //           navigator.geolocation.getCurrentPosition(
-  //             (position) => {
-  //               alert(`Latitude: ${position.coords.latitude}, Longitude: ${position.coords.longitude}`);
-  //             },
-  //             (error) => {
-  //               console.error("Error Code = " + error.code + " - " + error.message);
-  //               alert("Error getting location: " + error.message);
-  //             },
-  //             {
-  //               enableHighAccuracy: true,
-  //               timeout: 5000,
-  //               maximumAge: 0
-  //             }
-  //           );
-  //         } else {
-  //           alert('Location permission not granted.');
-  //         }
-  //       }).catch(err => {
-  //         console.error("Permission request error: ", err);
-  //         alert("Error requesting location permissions.");
-  //       });
-  //     } else {
-  //       alert('Geolocation is not supported by your browser.');
-  //     }
-  // }
-
-  // async function requestLocationPermission() {
-  //   // This function should handle the permission request.
-  //   // The implementation depends on whether you're using a library/plugin and which one.
-  //   // Return a promise that resolves with the permission status ('granted', 'denied', etc.)
-  // }
-
-
-
-  //

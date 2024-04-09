@@ -1,8 +1,9 @@
+import axios from 'axios';
 import React, { useState } from 'react'
 import { Link, useNavigate} from 'react-router-dom';
-import axios from 'axios';
-import './SignupPage.css'
 import { NotificationPopup } from '../../components';
+import { API_ENDPOINTS } from '../../components/Auth/apiConfig';  
+import './SignupPage.css'
 
 
 function SignupPage() {
@@ -11,7 +12,7 @@ function SignupPage() {
     email: '',
     password1: '',
     password2: '',
-    role:'Farmer'
+    role:'Consumer'
   });
   const [error, setError] = useState('');
   const navigate = useNavigate(); 
@@ -35,7 +36,7 @@ function SignupPage() {
       role:'Farmer'
     };
     try {
-      const url = 'https://ajayvishnu.pythonanywhere.com/api/user/register/';
+      const url = `${API_ENDPOINTS.users}/register/`;
       await axios.post(url, userData);
       setShowNotification(true);
       setTimeout(() => setShowNotification(false), 5000);

@@ -1,16 +1,20 @@
 import React from 'react'
+import { API_ENDPOINTS } from '../../components/Auth/apiConfig';  
 import './productcomponent.css'
-import banana from '../../Images/Banana.png'
-function ProductComponent() {
+
+
+function ProductComponent(props) {
+  const { name, price, image, altText } = props;
+  const backendBaseUrl = API_ENDPOINTS.media + image;
+  console.log(backendBaseUrl)
+
   return (
-    <div className='product-component-ovrerall'>
-      
+    <div className='product-component-overall'>
       <div className='minicard'>
-        
         <div className='Textbody'>
-        <img src={banana} alt='banana' className='banana'></img>
-          <div className='name'>Kerala<br></br> Banana</div>
-          <div className='inr'>INR 210</div>
+          <img src={backendBaseUrl} alt={altText} className='product-image'></img>
+          <div className='name'>{name}</div>
+          <div className='inr'>INR {price}</div>
         </div>
       </div>
     </div>
