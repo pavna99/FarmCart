@@ -18,7 +18,9 @@
   .addressInfoItem{
     margin-bottom: 15px;
   }
- 
+  .addvalue:focus {
+    border-color: #A0A5BA; /* Change the border color when input is focused */
+  }
   
   .addlabel {
     

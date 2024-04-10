@@ -124,7 +124,7 @@ function CartPage(props) {
                         </div>
                     </div>
                 
-            </div><Link to='/checkout'>
+            </div><Link to='/checkoutpage'>
             <button className='checkbtn' type="submit" >
                 Checkout
             </button></Link>

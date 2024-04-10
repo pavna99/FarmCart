@@ -42,9 +42,11 @@ function AddressPage(props) {
                     <input className='addvalue' type='text' id='phoneNumber'  placeholder='9400743624' readOnly />
                 </div>
             </form>
+            <Link to = "/checkout" >
             <button className='orderbtn' type="submit" >
                         Continue
             </button>
+            </Link>
                             
 
             <Navbar/>

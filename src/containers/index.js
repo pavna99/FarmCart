@@ -11,3 +11,4 @@ export {default as EmptyCart} from './EmptyCart/EmptyCart';
 export {default as CartPage} from './CartPage/CartPage';
 export {default as CheckoutPage} from './CheckoutPage/CheckoutPage';
 export {default as AddressPage} from './AddressPage/AddressPage';
+export {default as Checkout} from './Checkout/Checkout';

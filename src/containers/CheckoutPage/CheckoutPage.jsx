@@ -1,4 +1,4 @@
-
+//checkout without address
 
 import React from 'react';
 import './CheckoutPage.css'; 
@@ -10,7 +10,7 @@ import order from '../../Images/placeorder.svg';
 
 function CheckoutPage(props) {
     return (
-        <div className='checkout-overall-container'>
+        <div className='checkoutpage-overall-container'>
             <div className='header1'>
                 <img className='images1' src={bar} alt="bars" />
                 <img className='images1' src={cart} alt="cart" />
