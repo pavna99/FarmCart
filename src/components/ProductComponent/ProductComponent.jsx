@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { API_ENDPOINTS } from '../../components/Auth/apiConfig';  
 import './productcomponent.css'
 
@@ -10,6 +11,7 @@ function ProductComponent(props) {
 
   return (
     <div className='product-component-overall'>
+
       <div className='minicard'>
         <div className='Textbody'>
           <img src={backendBaseUrl} alt={altText} className='product-image'></img>
@@ -17,6 +19,7 @@ function ProductComponent(props) {
           <div className='inr'>INR {price}</div>
         </div>
       </div>
+      </Link> 
     </div>
   )
 }
