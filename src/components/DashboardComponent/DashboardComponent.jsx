@@ -68,6 +68,7 @@ const DashboardComponent = () => {
                     {selectedHeading === 'Heading1' && fruits.map((item, index) => (
                         <div key={index} className='Productbox'>
                             <ProductComponent
+                                id = {item.product_id}
                                 name={item.product_name}
                                 price={item.price}
                                 image={item.product_image}
