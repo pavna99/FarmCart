@@ -24,9 +24,8 @@ function ProductComponent(props) {
           <div className='inr'>INR {price}</div>
         </div>
       </div>
-      </Link> 
-    </div>
-    </Link>
+      </div>
+    </Link> 
   )
 }
 
