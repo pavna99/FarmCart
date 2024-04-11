@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { API_ENDPOINTS } from '../../components/Auth/apiConfig';  
 import './productcomponent.css'
 import { Link } from 'react-router-dom';
@@ -15,6 +16,7 @@ function ProductComponent(props) {
       state: { product_id: props.id }
     }}>
     <div className='product-component-overall'>
+
       <div className='minicard'>
         <div className='Textbody'>
           <img src={backendBaseUrl} alt={altText} className='product-image'></img>
@@ -22,6 +24,7 @@ function ProductComponent(props) {
           <div className='inr'>INR {price}</div>
         </div>
       </div>
+      </Link> 
     </div>
     </Link>
   )

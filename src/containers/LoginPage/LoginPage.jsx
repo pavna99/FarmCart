@@ -52,7 +52,7 @@ function LoginPage() {
             <label className='labelstyles'>Password</label><br></br>
             <input className='inputfield' type="password" name="password" value={data.password} onChange={handleChange} placeholder="Enter Your Password" required /><br></br>
             <input className='checkbox1' type='checkbox' name="rememberme" />
-            <label style={{'margin':'0 0 0 4px', 'textAlign':'center'}} className='labelstyles'>Remember Me</label>
+            <label style={{'margin':'0 0 0 4px', 'textAlign':'center'}} className='labelstyles'>Remember Me</label><br></br>
             <label className='fplabel'>Forgot Password</label>
             {error && <div>{error}</div>} 
             <button className='submitbtn' type="submit" >Log In</button>
