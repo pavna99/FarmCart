@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Expandpage.css';
-import cart from '../../Images/shopping-cart.svg';
-import bar from '../../Images/Bar.png';
+
 import product from '../../Images/product.png';
 import farmer from '../../Images/farmerphoto.png';
 import { Link } from 'react-router-dom';
 import { Rating } from 'react-simple-star-rating';
 import { API_ENDPOINTS } from '../../components/Auth/apiConfig';  
-import { Navbar } from '../../components';
+import { Header, Navbar } from '../../components';
 import { useLocation } from 'react-router-dom';
 
 
@@ -63,10 +62,7 @@ function Expandpage(props) {
     
     return (
       <div className='expand-overall-container'>
-        <div className='header1'>
-          <img className='images1' src={bar} alt="bars" />
-          <img className='images1' src={cart} alt="cart" />
-        </div>
+        <Header/>
         <div className='product-container'>
           <div className='product-details-box'>
             <div className='productbox'>

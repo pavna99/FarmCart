@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './Checkout.css'; 
 import home from '../../Images/Home.svg';
 import office from '../../Images/Briefcase.svg';
-import { Navbar} from '../../components';
+import { Navbar,Header} from '../../components';
 import { Link } from 'react-router-dom';
 import cart from '../../Images/shopping-cart.svg';
 import bar from '../../Images/Bar.png';
@@ -15,10 +15,8 @@ function Checkout(props) {
 };
     return (
         <div className='checkoutpage-overall-container'>
-            <div className='header1'>
-                <img className='images1' src={bar} alt="bars" />
-                <img className='images1' src={cart} alt="cart" />
-            </div>
+            
+            <Header/>
             <div className='checkout-container'>
             <div className={selected ? 'AddressSelected' : 'Address'} onClick={handleSelect}>
         <div className="Frame11">
@@ -103,7 +101,7 @@ function Checkout(props) {
                         </div>
                     </div>
                     </div>
-                    <Link to="/ordersucess">
+                    <Link to="/checkout/ordersucess">
                     <div className='orderbtn2' type="submit" >
                         <img className="bagicon"src={order} alt="bagicon"></img>
                         <div className='placeorder'>Place order</div>

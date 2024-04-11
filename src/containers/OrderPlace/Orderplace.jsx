@@ -1,6 +1,6 @@
 import React from 'react';
 import './Orderplace.css';
-import { Navbar} from '../../components';
+import { Header, Navbar} from '../../components';
 import { Link } from 'react-router-dom';
 import cart from '../../Images/shopping-cart.svg';
 import bar from '../../Images/Bar.png';
@@ -9,10 +9,7 @@ import orderplaced from '../../Images/orderplace.png';
 function Orderplace(props) {
     return (
         <div className='orderplace-overall-container'>
-            <div className='header1'>
-                <img className='images1' src={bar} alt="bars" />
-                <img className='images1' src={cart} alt="cart" />
-            </div>
+            <Header/>
             <div className='placed-container'>
                 <img className='placed' src={orderplaced} alt="placed"/>
                 <h2 className='orderplacetext'>Order placed!</h2>

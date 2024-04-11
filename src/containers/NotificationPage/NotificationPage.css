@@ -1,0 +1,65 @@
+.notification-overall-container{
+    height: 100vh;
+    background-color: #F6F5F5;
+    justify-content: center;
+    align-items: center;
+}
+.overallframe {
+    width: 351px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-left: 8%;
+  }
+  
+  .Notificationcell {
+    width: 325px;
+    height: auto;
+    background: white;
+    border-radius: 11.03px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: 12.76px;
+    padding-bottom: 4.79px;
+  }
+  
+  
+  .Avatarandsubjectcontainer {
+    align-self: stretch;
+    padding-left: 12.76px;
+    padding-right: 12.76px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 12.76px;
+  }
+  
+ 
+  .Subjectlinecontainer {
+    flex: 1 1 0;
+    height: 13px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 7.98px;
+    font-size: 14px;
+  }
+  
+  
+  .Timestampcontainer {
+    align-self: stretch;
+    height: 16px;
+    color: #A5ACB8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 12px;
+  }
+  

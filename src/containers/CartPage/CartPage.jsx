@@ -1,6 +1,6 @@
 import React from 'react';
 import './CartPage.css';
-import { Navbar} from '../../components';
+import { Header, Navbar} from '../../components';
 import { Link } from 'react-router-dom';
 import cart from '../../Images/shopping-cart.svg';
 import bar from '../../Images/Bar.png';
@@ -28,10 +28,7 @@ function CartPage(props) {
       
     return (
         <div className='cart-overall-container'>
-            <div className='header1'>
-                <img className='images1' src={bar} alt="bars" />
-                <img className='images1' src={cart} alt="cart" />
-            </div>
+            <Header/>
             <div  className='cartlist'>
                 <div id="deleteBtn" className='listitem'>
                     <img  className="proimage" src={product} alt="image1"/>
