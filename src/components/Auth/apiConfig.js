@@ -7,5 +7,7 @@ export const API_ENDPOINTS = {
   cart: `${API_BASE_URL}/api/cart`,
   wishlist: `${API_BASE_URL}/api/wishlist`,
   order: `${API_BASE_URL}/api/order`,
+  productdetails: `${API_BASE_URL}/api/product/product-details/`,
+
 
 };

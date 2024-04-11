@@ -1,66 +1,74 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Navbar } from '../../components';
+import { Rating } from 'react-simple-star-rating';
+import { Link, useLocation, useParams } from 'react-router-dom';
+import {} from 'react-router-dom';
+import { API_ENDPOINTS } from '../../components/Auth/apiConfig';  
+
 import './Expandpage.css';
 import cart from '../../Images/shopping-cart.svg';
 import bar from '../../Images/Bar.png';
 import product from '../../Images/product.png';
 import farmer from '../../Images/farmerphoto.png';
-import { Link } from 'react-router-dom';
-import { Rating } from 'react-simple-star-rating';
-import { API_ENDPOINTS } from '../../components/Auth/apiConfig';  
-import { Navbar } from '../../components';
-import { useLocation } from 'react-router-dom';
+
+function Expandpage() {
+    // Counter
+    const [counter, setCounter] = useState(0);
+    const increase = () => {
+      setCounter(count => count + 1);
+    };
+    const decrease = () => { 
+    setCounter(count => count - 1);
+    };
 
 
-function Expandpage(props) {
-    // const [counter, setCounter] = useState(0);
+    // Rating Component
+    const [rating, setRating] = useState(0)
+
+
+    //Backend integration
+    const { product_id } = useParams();
+    const [productDetails, setProductDetails] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState('');
+
+    useEffect(() => {
+      if (!product_id) {
+        setError('Product ID not provided.');
+        setLoading(false);
+        return;
+      }
   
-    // // Increase counter
-    // const increase = () => {
-    //   setCounter(count => count + 1);
-    // };
+      const fetchProductDetails = async () => {
+        try {
+          const response = await axios.get(`${API_ENDPOINTS.productdetails}${product_id}`);
+          console.log(response);
+          setProductDetails(response.data);
+        } catch (error) {
+          console.error('Error fetching product details:', error);
+          setError('Error fetching product details');
+        } finally {
+          setLoading(false);
+        }
+      };
   
-    // // Decrease counter
-    // const decrease = () => {
-        
-    //   setCounter(count => count - 1);
-    // };
-    // const [rating, setRating] = useState(0)
-    // const handleRating = (rate: number) => {
-    //   setRating(rate)
-
-    // }
-    // const onPointerEnter = () => console.log('Enter')
-    // const onPointerLeave = () => console.log('Leave')
-    // const onPointerMove = (value: number, index: number) => console.log(value, index)
-
-    // const location = useLocation();
-    // const product_id = location.state ? location.state.product_id : null;
-    // console.log(product_id)
-    // const [productDetails, setProductDetails] = useState(null);
-
-    // useEffect(() => {
-    //   const fetchProductDetails = async () => {
-    //     try {
-    //       const response = await axios.get(`${API_ENDPOINTS.product}/details/${product_id}`);
-    //       console.log(response)
-    //       setProductDetails(response.data);
-    //     } catch (error) {
-    //       console.error('Error fetching product details:', error);
-    //     }
-    //   };
-    //   if (product_id) {
-    //     fetchProductDetails();
-    //   }
-    //   if (!productDetails) {
-    //     return <div>Loading...</div>;
-    //   }
-    // }, [product_id]);
+      fetchProductDetails();
+    }, [product_id]);
   
-    // if (!productDetails) {
-    //   return <div>Loading...</div>;
-    // }
-    
+    if (loading) {
+      return <div className=''>Loading.....</div>;
+    }
+  
+    if (error) {
+      return <div>Error: {error}</div>;
+    }
+  
+    if (!productDetails) {
+      return <div>Product not found.</div>;
+    }
+    const product_image_url = API_ENDPOINTS.media + productDetails.product_image;
+
     return (
       <div className='expand-overall-container'>
         <div className='header1'>
@@ -71,23 +79,23 @@ function Expandpage(props) {
           <div className='product-details-box'>
             <div className='productbox'>
               <div className='product-name'>
-                Bhutan Pomegranate
+                {productDetails.product_name}
               </div>
               <div className='titlebox'>Price (/kg)</div>
-              <div className='price'>INR 350</div>
+              <div className='price'>INR {productDetails.price}</div>
               <div className='titlebox'>Quantity (in kgs)</div>
               <div className='quantity-entry'>
                     
                     <div className="btn__container">
-                    <button className="control__btn" /*onClick={decrease}*/>-</button>
-                    <span className="counter__output" /*{counter}*/>counter</span>
-                    <button className="control__btn" /*onClick={increase}*/>+</button>
+                    <button className="control__btn" onClick={decrease}>-</button>
+                    <span className="counter__output">{counter}</span>
+                    <button className="control__btn" onClick={increase}>+</button>
                     
                     </div>
                 </div>
             </div>
           
-          <img className="images3" src={product} alt="hoho" />
+          <img className="images3" src={product_image_url} alt="hoho" />
           </div>
        
         <div className='certificate'>
@@ -99,7 +107,7 @@ function Expandpage(props) {
         </div>
         </div>
         <div className='popdiv'>
-        The pomegranate is a fruit-bearing deciduous shrub in the family Lythraceae, subfamily Punicoideae, that grows between 5 and 10 m tall.
+        {productDetails.product_description}
           <h3 className='farmdetailshead'>Farm details</h3>
           <div className='farmdetailsdesc'>
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35" fill="none">
@@ -137,7 +145,7 @@ function Expandpage(props) {
                 </div>
                 <div className='farmerdesc'>
                     <Rating
-                    initialValue={3.5}
+                    initialValue={3}
                     onClick={function noRefCheck(){}}
                     readonly
                     size={28}

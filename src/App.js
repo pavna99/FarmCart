@@ -19,7 +19,7 @@ const App = () => {
           <Route path="/dashboard" exact element={<Dashboard/>} />
           <Route path="/seemore" exact element={<Seemore/>} />
           <Route path="/search" exact element={<SearchPage/>} />
-          <Route path="/expand" exact element={<Expandpage/>} />
+          <Route path="/expand/:product_id" exact element={<Expandpage/>} />
           <Route path="/empty" exact element={<EmptyCart/>} />
           <Route path="/cart" exact element={<CartPage/>} />
           <Route path="/checkoutpage" exact element={<CheckoutPage/>}/>

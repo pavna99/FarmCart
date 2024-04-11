@@ -1,0 +1,13 @@
+.floatdiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:11%;
+}
+.fplabel{
+    margin: 0;
+}
+
+.labelstylescb{
+    margin: 0;
+}
