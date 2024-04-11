@@ -13,7 +13,9 @@ function Navbar() {
       <Link to='/dashboard'>
         <img src={navimg1} alt="" />
       </Link>
+      <Link to='/notification'>
         <img src={navimg2} alt="" />
+        </Link>
         <img src={navimg3} alt="" />
         <img src={navimg4} alt="" />
     </div>

@@ -7,8 +7,7 @@ import {} from 'react-router-dom';
 import { API_ENDPOINTS } from '../../components/Auth/apiConfig';  
 
 import './Expandpage.css';
-import cart from '../../Images/shopping-cart.svg';
-import bar from '../../Images/Bar.png';
+
 import product from '../../Images/product.png';
 import farmer from '../../Images/farmerphoto.png';
 
@@ -71,10 +70,7 @@ function Expandpage() {
 
     return (
       <div className='expand-overall-container'>
-        <div className='header1'>
-          <img className='images1' src={bar} alt="bars" />
-          <img className='images1' src={cart} alt="cart" />
-        </div>
+        <Header/>
         <div className='product-container'>
           <div className='product-details-box'>
             <div className='productbox'>

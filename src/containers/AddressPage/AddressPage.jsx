@@ -1,6 +1,6 @@
 import './AddressPage.css';
 import React from 'react';
-import { Navbar} from '../../components';
+import { Header, Navbar} from '../../components';
 import { Link } from 'react-router-dom';
 import cart from '../../Images/shopping-cart.svg';
 import bar from '../../Images/Bar.png';
@@ -9,10 +9,7 @@ import office from '../../Images/Briefcase.svg';
 function AddressPage(props) {
     return (
         <div className='address-overall-container'>
-            <div className='header1'>
-                <img className='images1' src={bar} alt="bars" />
-                <img className='images1' src={cart} alt="cart" />
-            </div>
+            <Header/>
             <form className='addressInfoContainer'>
                 <div className='addressInfoItem'>
                     <label className='addlabel' >Address Type</label>

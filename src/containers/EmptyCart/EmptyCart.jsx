@@ -1,6 +1,6 @@
 import React from 'react';
 import './EmptyCart.css';
-import { Navbar} from '../../components';
+import { Navbar,Header} from '../../components';
 import { Link } from 'react-router-dom';
 import cart from '../../Images/shopping-cart.svg';
 import bar from '../../Images/Bar.png';
@@ -9,10 +9,7 @@ import emptycart from '../../Images/emptycart.svg';
 function EmptyCart(props) {
     return (
         <div className='emptycart-overall-container'>
-            <div className='header1'>
-                <img className='images1' src={bar} alt="bars" />
-                <img className='images1' src={cart} alt="cart" />
-            </div>
+            <Header/>
             <div className='emptycart-container'>
                 <img className='emptycart' src={emptycart} alt="an empty cart"/>
                 <h2>Your cart is empty</h2>
