@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Link , useNavigate} from 'react-router-dom';
+import { API_ENDPOINTS } from '../../components/Auth/apiConfig';  
 import axios from 'axios';
 import './loginpage.css'
 
@@ -25,7 +26,7 @@ function LoginPage() {
     };
   
     try {
-      const url = 'https://ajayvishnu.pythonanywhere.com/api/user/login/';
+      const url = `${API_ENDPOINTS.users}/login/`;
       const response = await axios.post(url, userData);
       const accessToken = response.data.accessToken;
 

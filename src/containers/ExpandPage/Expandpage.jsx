@@ -1,39 +1,66 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import './Expandpage.css';
 import cart from '../../Images/shopping-cart.svg';
 import bar from '../../Images/Bar.png';
 import product from '../../Images/product.png';
 import farmer from '../../Images/farmerphoto.png';
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Rating } from 'react-simple-star-rating';
+import { API_ENDPOINTS } from '../../components/Auth/apiConfig';  
 import { Navbar } from '../../components';
+import { useLocation } from 'react-router-dom';
+
+
 function Expandpage(props) {
-    const [counter, setCounter] = useState(0);
+    // const [counter, setCounter] = useState(0);
   
-    // Increase counter
-    const increase = () => {
-      setCounter(count => count + 1);
-    };
+    // // Increase counter
+    // const increase = () => {
+    //   setCounter(count => count + 1);
+    // };
   
-    // Decrease counter
-    const decrease = () => {
+    // // Decrease counter
+    // const decrease = () => {
         
-      setCounter(count => count - 1);
-    };
-    const [rating, setRating] = useState(0)
+    //   setCounter(count => count - 1);
+    // };
+    // const [rating, setRating] = useState(0)
+    // const handleRating = (rate: number) => {
+    //   setRating(rate)
 
-  // Catch Rating value
-  const handleRating = (rate: number) => {
-    setRating(rate)
+    // }
+    // const onPointerEnter = () => console.log('Enter')
+    // const onPointerLeave = () => console.log('Leave')
+    // const onPointerMove = (value: number, index: number) => console.log(value, index)
 
-    // other logic
-  }
-  // Optinal callback functions
-  const onPointerEnter = () => console.log('Enter')
-  const onPointerLeave = () => console.log('Leave')
-  const onPointerMove = (value: number, index: number) => console.log(value, index)
-   
+    // const location = useLocation();
+    // const product_id = location.state ? location.state.product_id : null;
+    // console.log(product_id)
+    // const [productDetails, setProductDetails] = useState(null);
+
+    // useEffect(() => {
+    //   const fetchProductDetails = async () => {
+    //     try {
+    //       const response = await axios.get(`${API_ENDPOINTS.product}/details/${product_id}`);
+    //       console.log(response)
+    //       setProductDetails(response.data);
+    //     } catch (error) {
+    //       console.error('Error fetching product details:', error);
+    //     }
+    //   };
+    //   if (product_id) {
+    //     fetchProductDetails();
+    //   }
+    //   if (!productDetails) {
+    //     return <div>Loading...</div>;
+    //   }
+    // }, [product_id]);
+  
+    // if (!productDetails) {
+    //   return <div>Loading...</div>;
+    // }
+    
     return (
       <div className='expand-overall-container'>
         <div className='header1'>
@@ -52,9 +79,9 @@ function Expandpage(props) {
               <div className='quantity-entry'>
                     
                     <div className="btn__container">
-                    <button className="control__btn" onClick={decrease}>-</button>
-                    <span className="counter__output">{counter}</span>
-                    <button className="control__btn" onClick={increase}>+</button>
+                    <button className="control__btn" /*onClick={decrease}*/>-</button>
+                    <span className="counter__output" /*{counter}*/>counter</span>
+                    <button className="control__btn" /*onClick={increase}*/>+</button>
                     
                     </div>
                 </div>
@@ -133,4 +160,4 @@ function Expandpage(props) {
     );
   }
   
-  export default Expandpage;
+export default Expandpage;
