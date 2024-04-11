@@ -103,11 +103,12 @@ function Checkout(props) {
                         </div>
                     </div>
                     </div>
+                    <Link to="/ordersucess">
                     <div className='orderbtn2' type="submit" >
                         <img className="bagicon"src={order} alt="bagicon"></img>
                         <div className='placeorder'>Place order</div>
                     </div>
-                    
+                    </Link>
                 
             <Navbar/>
             
