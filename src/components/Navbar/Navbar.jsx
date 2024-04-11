@@ -16,7 +16,8 @@ function Navbar() {
       <Link to='/notification'>
         <img src={navimg2} alt="" />
         </Link>
-        <img src={navimg3} alt="" />
+        <Link to='/profile'>
+        <img src={navimg3} alt="" /></Link>
         <img src={navimg4} alt="" />
     </div>
   )

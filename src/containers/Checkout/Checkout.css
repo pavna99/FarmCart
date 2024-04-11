@@ -290,7 +290,7 @@
     
     .orderbtn2 {
       display: flex;
-      position: fixed;
+      margin-top: 25px;
       bottom: 100px; 
       color: #FFF;
       font-size: 15.448px;

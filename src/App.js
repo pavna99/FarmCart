@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { IntroPage, LoadingPage, SignupPage,LocationPage, LoginPage, Dashboard, Seemore, SearchPage, Expandpage, EmptyCart, CartPage,CheckoutPage, AddressPage,Checkout, Orderplace ,Notification, EmptyNotification} from './containers';
+import { IntroPage, LoadingPage, SignupPage,LocationPage, LoginPage, Dashboard, Seemore, SearchPage, Expandpage, EmptyCart, CartPage,CheckoutPage, AddressPage,Checkout, Orderplace ,Notification, EmptyNotification, Profile} from './containers';
 import { AuthProvider } from './components/Auth/AuthContext';
 
 
@@ -27,6 +27,7 @@ const App = () => {
           <Route path="/checkout" exact element={<Checkout/>}/>
           <Route path="/checkout/ordersucess" exact element={<Orderplace/>}/>
           <Route path="/notification" exact element={<Notification/>}/>
+          <Route path="/profile" exact element={<Profile/>}/>
           <Route path="/nonotification" exact element={<EmptyNotification/>}/>
 
         </Routes>
