@@ -32,7 +32,6 @@ function Seemore(props) {
             <div className='Productlist'>
                     <div className='Productcompset2'>
                         {products.map((item,index)=>
-                            <Link to='/expand'>
                             <div className='Productbox'>
                                 <ProductComponent
                                     name={item.product_name}
@@ -40,7 +39,6 @@ function Seemore(props) {
                                     image={item.product_image}
                                     altText={`${item.product_name} image`}/>
                             </div>
-                            </Link>
                         )}
                     </div>
             </div>
