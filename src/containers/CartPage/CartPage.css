@@ -6,6 +6,9 @@
 }
 .cartlist{
     padding:3% 3% 3% 3%;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
 }
 .proimage{
     width:130px;

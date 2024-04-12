@@ -14,7 +14,6 @@ function LocationPage() {
           const location_latitude = position.coords.latitude.toString();
           const location_longitude = position.coords.longitude.toString();
           const accessToken = localStorage.getItem('accessToken');
-          console.log(accessToken)
           if (!accessToken) {
             console.error('No access token available.');
             return;

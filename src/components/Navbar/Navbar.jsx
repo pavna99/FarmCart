@@ -15,11 +15,14 @@ function Navbar() {
       </Link>
       <Link to='/notification'>
         <img src={navimg2} alt="" />
-        </Link>
+      </Link>
+      <Link to='/chat'>
+        <img src={navimg3} alt="" />
+      </Link>
+      <Link to='/profile'>
         <img src={navimg4} alt="" />
-        <Link to='/profile'>
-        <img src={navimg3} alt="" /></Link>
-        
+      </Link>
+
     </div>
   )
 }

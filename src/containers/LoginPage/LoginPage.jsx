@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link , useNavigate} from 'react-router-dom';
 import { API_ENDPOINTS } from '../../components/Auth/apiConfig';  
 import axios from 'axios';
-import './loginpage.css'
+import './login.css'
 
 function LoginPage() {
   const [data, setData] = useState({
@@ -51,9 +51,10 @@ function LoginPage() {
             <input className='inputfield' type="text" name="EmailOrUsername" value={data.EmailOrUsername} onChange={handleChange} placeholder="Enter Your Email" required /><br></br>
             <label className='labelstyles'>Password</label><br></br>
             <input className='inputfield' type="password" name="password" value={data.password} onChange={handleChange} placeholder="Enter Your Password" required /><br></br>
-            <input className='checkbox1' type='checkbox' name="rememberme" />
-            <label style={{'margin':'0 0 0 4px', 'textAlign':'center'}} className='labelstyles'>Remember Me</label><br></br>
-            <label className='fplabel'>Forgot Password</label>
+            <div className='floatdiv'>
+              <label className='labelstylescb'><input className='checkbox1' type='checkbox' name="rememberme" />Remember Me</label><br></br>
+              <label className='fplabel'>Forgot Password</label>
+            </div>
             {error && <div>{error}</div>} 
             <button className='submitbtn' type="submit" >Log In</button>
             </form> 
