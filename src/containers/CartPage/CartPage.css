@@ -80,6 +80,7 @@
         border-radius: 30px;
         background: #0BCE83;
         width: 80%;
+        max-width: 450px;
         height: 70px;
         border: none;
         margin-left: 10%;
