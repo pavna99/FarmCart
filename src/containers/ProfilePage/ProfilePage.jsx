@@ -16,7 +16,9 @@ function ProfilePage(props) {
         <div className='Profile-overall-component'>
             <div className='header1'>
                 <img className='images1' src={bar} alt="bars"/>
+                <Link to="/cart">
                 <img className='images1' src={cart} alt="cart"/>
+                </Link>
             </div>
             <div className='profile-container'>
                 <div className='profile-box'>
