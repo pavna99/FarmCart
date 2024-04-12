@@ -1,5 +1,4 @@
-import React from 'react'
-
+import React from 'react' 
 import { API_ENDPOINTS } from '../../components/Auth/apiConfig';  
 import './productcomponent.css'
 import { Link } from 'react-router-dom';
@@ -11,12 +10,8 @@ function ProductComponent(props) {
   console.log(props.id)
 
   return (
-    <Link to={{
-      pathname: '/expand',
-      state: { product_id: props.id }
-    }}>
+    <Link to={`/expand/${props.id}`}>
     <div className='product-component-overall'>
-
       <div className='minicard'>
         <div className='Textbody'>
           <img src={backendBaseUrl} alt={altText} className='product-image'></img>

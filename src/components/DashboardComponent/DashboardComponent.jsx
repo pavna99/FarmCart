@@ -81,6 +81,7 @@ const DashboardComponent = () => {
                     {selectedHeading === 'Heading2' && vegetables.map((item, index) => (
                         <div key={index} className='Productbox'>
                             <ProductComponent
+                                id = {item.product_id}
                                 name={item.product_name}
                                 price={item.price}
                                 image={item.product_image}
@@ -93,6 +94,7 @@ const DashboardComponent = () => {
                     {selectedHeading === 'Heading3' && exotic.map((item, index) => (
                         <div key={index} className='Productbox'>
                             <ProductComponent
+                                id = {item.product_id}
                                 name={item.product_name}
                                 price={item.price}
                                 image={item.product_image}

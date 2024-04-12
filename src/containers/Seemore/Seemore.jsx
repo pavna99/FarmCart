@@ -34,6 +34,7 @@ function Seemore(props) {
                         {products.map((item,index)=>
                             <div className='Productbox'>
                                 <ProductComponent
+                                    id = {item.product_id}
                                     name={item.product_name}
                                     price={item.price}
                                     image={item.product_image}
