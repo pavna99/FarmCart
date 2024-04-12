@@ -17,7 +17,9 @@ function Navbar() {
         <img src={navimg2} alt="" />
         </Link>
         <img src={navimg3} alt="" />
+      <Link to='/chat'>
         <img src={navimg4} alt="" />
+      </Link>
     </div>
   )
 }

@@ -15,3 +15,4 @@ export {default as Checkout} from './Checkout/Checkout';
 export {default as Orderplace} from './OrderPlace/Orderplace';
 export {default as Notification} from './NotificationPage/NotificationPage';
 export {default as EmptyNotification} from './EmptyNotification/EmptyNotification';
+export {default as ChatPage} from './ChatPage/ChatPage';

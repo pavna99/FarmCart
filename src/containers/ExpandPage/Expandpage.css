@@ -9,13 +9,12 @@
     overflow-x: hidden;
 }
 .product-container{
-    height:30%
-   
+    height:30%;
+    padding: 0 0 0 10%;
 }
 .product-details-box{
     display: flex;
     flex-direction: row;
-    padding:0% 0% 0% 10%;
 }
 .productbox{
     width:40%;
@@ -43,14 +42,11 @@
 }
 .images3{
     width:60%;
-    margin-right: 10%;
 }
 .certificate{
     display: flex;
     align-items:center;
     justify-content:center;
-    
-   
 }
 .certification{
     font-size: 15px;
@@ -59,11 +55,15 @@
 }
 .popdiv {
     height:40%;
-    width: 100%;
-    padding: 10%;
+    width: 90%;
+    padding: 5%;
     background-color: #ffffff;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 .farmdetailshead, .farmerdetailshead{
     font-size: 20px;
@@ -72,7 +72,7 @@
 .farmdetailsdesc{
 display: flex;
 align-items: center;
-
+width:100%;
 }
 .Farmlocationdesc{
     margin: 3%;
@@ -94,6 +94,7 @@ align-items: center;
     font-weight: 300;
 }
 .farmer{
+    height: 50px;
     border-radius: 50%;
 }
 .farmername{

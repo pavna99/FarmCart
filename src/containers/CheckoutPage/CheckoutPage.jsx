@@ -1,14 +1,57 @@
 //checkout without address
-
-import React from 'react';
+import React, { useState, useEffect }  from 'react';
 import './CheckoutPage.css'; 
 import { Navbar,Header} from '../../components';
 import { Link } from 'react-router-dom';
-import cart from '../../Images/shopping-cart.svg';
-import bar from '../../Images/Bar.png';
-import order from '../../Images/placeorder.svg';
+import { API_ENDPOINTS } from '../../components/Auth/apiConfig';
 
-function CheckoutPage(props) {
+function CheckoutPage() {
+    const [cartItems, setCartItems] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [totalPrice, setTotalPrice] = useState(0);
+    const [overallTotalPrice, setOverallTotalPrice] = useState(0);
+    const accessToken = localStorage.getItem('accessToken');
+
+    useEffect(() => {
+        const fetchCartItems = async () => {
+            try {
+              const response = await fetch(`${API_ENDPOINTS.cart}/cart-crud/`, {
+                method: 'GET',
+                headers: {
+                  'Authorization': `Bearer ${accessToken}`,
+                  'Content-Type': 'application/json',
+                },
+              });
+              if (!response.ok) {
+                throw new Error('Failed to fetch cart items');
+              }
+          
+              const data = await response.json();
+              setCartItems(data);
+          
+              const total = data.reduce((acc, item) => {
+                const price = parseFloat(item.product_details.price);
+                const quantity = parseInt(item.quantity, 10);  // Ensure quantity is a number
+                console.log(`Price: ${price}, Quantity: ${quantity}`);  // Log for debugging
+                return acc + quantity * price;
+              }, 0);
+          
+              console.log(`Total before additional costs: ${total}`);
+              setTotalPrice(total);  // Assuming this is a state setter function
+          
+              const overallTotal = total + 20;  // Add additional cost
+              console.log(`Overall Total (with additional costs): ${overallTotal}`);
+              setOverallTotalPrice(overallTotal);  // Also a state setter function
+          
+            } catch (error) {
+              console.error('Error fetching cart items:', error);
+            }
+          };
+          fetchCartItems();
+          
+      }, []);
+
+
     return (
         <div className='checkoutpage-overall-container'>
             <Header/>
@@ -40,7 +83,7 @@ function CheckoutPage(props) {
                         <div className="rowContainer">
                         <div className="row">
                             <div className="label">Item Price</div>
-                            <div className="value">₹ 2,940.00</div>
+                            <div className="value">₹ {totalPrice}</div>
                         </div>
                         <div className="row">
                             <div className="label">Packing Charges</div>
@@ -50,7 +93,7 @@ function CheckoutPage(props) {
                         <div className="separator"></div>
                         <div className="row">
                         <div className="totalLabel">Total Amount</div>
-                        <div className="totalValue">₹ 2,960.00</div>
+                        <div className="totalValue">₹ {overallTotalPrice}</div>
                         </div>
                     </div>
                     </div>
