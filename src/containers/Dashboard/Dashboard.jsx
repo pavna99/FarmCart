@@ -1,5 +1,5 @@
-import React from 'react'
-import './dashboard.css'
+import React from 'react';
+import './dashboard.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import { Navbar,DashboardComponent,ProductComponent} from '../../components'
 // import  {useState} from 'react'

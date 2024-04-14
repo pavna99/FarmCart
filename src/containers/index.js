@@ -17,3 +17,4 @@ export {default as Notification} from './NotificationPage/NotificationPage';
 export {default as EmptyNotification} from './EmptyNotification/EmptyNotification';
 export {default as ChatPage} from './ChatPage/ChatPage';
 export {default as Profile} from './ProfilePage/ProfilePage';
+export {default as FarmerDashboard} from './farmer-Dashboard/farmerdashboard';

@@ -1,0 +1,115 @@
+.overall-farmer-dashboard{
+    
+        height: 100vh;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        background-image: url('../../Images/whitecommonbg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        overflow-x: hidden;
+    }
+
+    .overall-farmer-dashboard-container::-webkit-scrollbar {
+        display: none; 
+      }
+      .username{
+        color:#7519EB;
+        margin-left:10%;
+        font-size:32px ;
+    }
+    .goodmorni{
+      margin-top:25px;
+      margin-left: 10%;
+      font-size:32px;
+    }
+    .header1{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        width: 80%;
+        max-width: 450px;
+        padding:10% 10% 6% 10%;
+        gap:86%;
+        margin:0;
+      }
+.dash-box{
+    display: flex;
+    margin-left: 10%;
+    margin-top: 13px;
+}
+.buttonbox1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   justify-content: center;
+    width: 148px;
+    height: 102px;
+    border-radius: 20.127px;
+    background: #FFF;
+    box-shadow: 0px 20.127px 40.253px 0px rgba(57, 57, 57, 0.10);
+    
+    margin-right: 9px;
+
+}
+.buttonbox2{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   justify-content: center;
+    width: 148px;
+    height: 102px;
+    border-radius: 20.127px;
+    background: #FFF;
+    box-shadow: 0px 20.127px 40.253px 0px rgba(57, 57, 57, 0.10);
+    margin-left: 9px;
+    margin-right: 9px;
+
+}
+.totalorder,.orderno{
+    color:  #0BCE83;
+
+font-family: "SF Pro Rounded";
+font-size: 39.09px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.ordertitle{
+    color: #222;
+
+font-family: "SF Pro Rounded";
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+.exploreproduct{
+    display: flex;
+  background: #7519eb;
+  border-radius: 11px;
+  width: 318px;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+  position: relative;
+  margin-top: 15px;
+  margin-left: 8%;
+}
+.explorepro{
+ color: #FFF;
+font-family: "SF Pro Rounded";
+font-size: 16px;
+font-weight: 300;
+margin-left: 10px;
+}
+.topproduct{
+    color: #000;
+text-align:left;
+margin-left: 10%;
+font-size: 19.86px;
+font-style: normal;
+font-weight: 600;
+line-height:  20px;
+margin-top: 15px;
+}
