@@ -10,7 +10,7 @@ function Header(props) {
             <div className='header1'>
                 <img className='images1' src={bar} alt="bars" />
                 <Link to='cart'>
-                <img className='images1' src={cart} alt="cart" />
+                <img className='cartimage' src={cart} alt="cart" />
                 </Link>
             </div>
             
