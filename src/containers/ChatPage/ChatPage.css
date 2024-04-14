@@ -5,6 +5,7 @@
     align-items: center;
     
 }
+
 .msg-chat{
   flex: 1;
   overflow-y: auto;

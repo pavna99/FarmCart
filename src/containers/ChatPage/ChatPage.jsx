@@ -5,6 +5,7 @@ import './ChatPage.css';
 import { Header, Navbar} from '../../components';
 import bot from '../../Images/smalllogo.png';
 
+
 function ChatPage() {
   const [query, setQuery] = useState('');
   const [responses, setResponses] = useState([]);
@@ -35,7 +36,7 @@ function ChatPage() {
     <div className='chat-overall-container'>
       <Header/>
       
-        
+     
     
         {responses.map((item, index) => (
           <div  className= 'msg-chat' key={index}>
