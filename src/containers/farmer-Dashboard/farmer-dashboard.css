@@ -96,6 +96,7 @@ line-height: normal;
   margin-top: 15px;
   margin-left: 8%;
 }
+
 .explorepro{
  color: #FFF;
 font-family: "SF Pro Rounded";
@@ -103,8 +104,9 @@ font-size: 16px;
 font-weight: 300;
 margin-left: 10px;
 }
+
 .topproduct{
-    color: #000;
+color: #000;
 text-align:left;
 margin-left: 10%;
 font-size: 19.86px;

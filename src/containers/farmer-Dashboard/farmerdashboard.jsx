@@ -6,6 +6,8 @@ import { BarChart } from '@mui/x-charts/BarChart';
 import bar from '../../Images/Bar.png';
 import { Link } from 'react-router-dom';
 
+
+
 function farmerdashboard(props) {
     const handleSvgClick = (event) => {
         const svg = event.target.closest('.mySvg');
