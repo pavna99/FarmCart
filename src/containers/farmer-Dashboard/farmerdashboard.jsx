@@ -2,7 +2,7 @@ import React from "react";
 import "./farmer-dashboard.css";
 import "./farmer-dashboard.css";
 import { FarmerNavbar } from "../../components";
-import { BarChart } from "@mui/x-charts/BarChart";
+// import { BarChart } from "@mui/x-charts/BarChart";
 import bar from "../../Images/Bar.png";
 import { Link } from "react-router-dom";
 import Saleschart from "../../components/SalesChart/Saleschart";

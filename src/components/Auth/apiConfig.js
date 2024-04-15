@@ -9,6 +9,9 @@ export const API_ENDPOINTS = {
   order: `${API_BASE_URL}/api/order`,
   chat: `${API_BASE_URL}/api/chat`,
   productdetails: `${API_BASE_URL}/api/product/product-details/`,
+  address: `${API_BASE_URL}/api/address/`,
+  order: `${API_BASE_URL}/api/order/`,
+  orderdetails: `${API_BASE_URL}/api/orderdetails/`
 
 
 };

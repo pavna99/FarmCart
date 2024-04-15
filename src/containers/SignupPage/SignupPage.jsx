@@ -33,7 +33,7 @@ function SignupPage() {
       username: data.username,
       email: data.email,
       password: data.password1,
-      role:'Farmer'
+      role:'Consumer'
     };
     try {
       const url = `${API_ENDPOINTS.users}/register/`;
