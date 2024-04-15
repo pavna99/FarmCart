@@ -21,9 +21,9 @@ const App = () => {
           <Route path="/empty" exact element={<EmptyCart/>} />
           <Route path="/cart" exact element={<CartPage/>} />
           <Route path="/checkoutpage" exact element={<CheckoutPage/>}/>
-          <Route path="/checkoutpage/address" exact element={<AddressPage/>}/>
+          <Route path="/address" exact element={<AddressPage/>}/>
           <Route path="/checkout" exact element={<Checkout/>}/>
-          <Route path="/checkout/ordersucess" exact element={<Orderplace/>}/>
+          <Route path="/ordersuccess" exact element={<Orderplace/>}/>
           <Route path="/notification" exact element={<Notification/>}/>
           <Route path="/profile" exact element={<Profile/>}/>
           <Route path="/nonotification" exact element={<EmptyNotification/>}/>

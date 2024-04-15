@@ -10,6 +10,7 @@ const DashboardComponent = () => {
     const [fruits, setFruits] = useState([]);
     const [vegetables, setVegetables] = useState([]);
     const [exotic, setExotic] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         axios.get(`${API_ENDPOINTS.product}/productlist/`)
@@ -39,7 +40,6 @@ const DashboardComponent = () => {
                 console.error('Error fetching the data:', error);
             });
     }, []); 
-
     return (
         <div className='Section1'>
             <div className='Tileset'>

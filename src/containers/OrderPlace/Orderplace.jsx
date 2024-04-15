@@ -6,6 +6,7 @@ import cart from '../../Images/shopping-cart.svg';
 import bar from '../../Images/Bar.png';
 import arrow from '../../Images/Arrow 1.svg';
 import orderplaced from '../../Images/orderplace.png';
+
 function Orderplace(props) {
     return (
         <div className='orderplace-overall-container'>

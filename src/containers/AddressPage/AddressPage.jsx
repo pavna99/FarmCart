@@ -1,53 +1,122 @@
-import './AddressPage.css';
-import React from 'react';
-import { Header, Navbar} from '../../components';
-import { Link } from 'react-router-dom';
-import cart from '../../Images/shopping-cart.svg';
-import bar from '../../Images/Bar.png';
-import home from '../../Images/Home.svg';
-import office from '../../Images/Briefcase.svg';
+import React, { useState, useEffect } from 'react';
+import { Header, Navbar } from '../../components';
+import { useNavigate } from 'react-router-dom';
+import { API_ENDPOINTS } from '../../components/Auth/apiConfig';
+import "./AddressPage.css"
+
 function AddressPage(props) {
+    const [addressType, setAddressType] = useState('Home');
+    const [name, setName] = useState('');
+    const [address, setAddress] = useState('');
+    const [pincode, setPincode] = useState('');
+    const [phonenumber, setPhonenumber] = useState('');
+    const [addresses, setAddresses] = useState([]);
+    const navigate = useNavigate();
+    const accessToken = localStorage.getItem('accessToken');
+
+    useEffect(() => {
+        fetchAddresses();
+    }, []);
+
+    useEffect(() => {
+        const currentAddress = addresses.find(addr => addr.address_type === addressType);
+        if (currentAddress) {
+            setName(currentAddress.name || '');
+            setAddress(currentAddress.address || '');
+            setPincode(currentAddress.pincode || '');
+            setPhonenumber(currentAddress.phonenumber || '');
+        } else {
+            setName('');
+            setAddress('');
+            setPincode('');
+            setPhonenumber('');
+        }
+
+    }, [addressType, addresses]);
+
+    const fetchAddresses = async () => {
+        try {
+            const response = await fetch(`${API_ENDPOINTS.address}addresses/`, {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${accessToken}`,
+                    'Content-Type': 'application/json',
+                },
+            });
+            if (!response.ok) {
+                throw new Error('Failed to fetch addresses');
+            }
+            const data = await response.json();
+            setAddresses(data);
+        } catch (error) {
+            console.error('Error fetching addresses:', error);
+        }
+    };
+
+    const handleSubmit = async (event) => {
+        event.preventDefault();
+        const existingAddress = addresses.find(addr => addr.address_type === addressType);
+        const url = existingAddress ? `${API_ENDPOINTS.address}addresses/${existingAddress.id}/` : `${API_ENDPOINTS.address}addresses/`;
+        const method = existingAddress ? 'PATCH' : 'POST';
+
+        try {
+            const response = await fetch(url, {
+                method: method,
+                headers: {
+                    'Authorization': `Bearer ${accessToken}`,
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    address_type: addressType,
+                    name: name,
+                    address: address,
+                    pincode: pincode,
+                    phonenumber: phonenumber,
+                }),
+            });
+            if (!response.ok) {
+                throw new Error('Failed to save address');
+            }
+            await fetchAddresses(); 
+            navigate('/checkout');
+        } catch (error) {
+            console.error('Error saving address:', error);
+        }
+    };
+
     return (
         <div className='address-overall-container'>
             <Header/>
-            <form className='addressInfoContainer'>
+            <form className='addressInfoContainer' onSubmit={handleSubmit}>
                 <div className='addressInfoItem'>
-                    <label className='addlabel' >Address Type</label>
-                    <select className='addvalue' id='addressType'>
-                        <option value='home'>
-                        <img className='homeimage' src={home} alt="icon" />
-                            Home Address
-                            </option>
-                        <option value='work'>Office Address</option>
-                        <option value='other'>Other</option>
+                    <label className='addlabel'>Address Type</label>
+                    <select className='addvalue' value={addressType} onChange={e => setAddressType(e.target.value)}>
+                        <option value='Home'>Home Address</option>
+                        <option value='Office'>Office Address</option>
+                        <option value='Other'>Other</option>
                     </select>
                 </div>
                 <div className='addressInfoItem'>
-                    <label className='addlabel' >Name</label>
-                    <input className='addvalue' type='text' id='name' placeholder='example@gmail.com' readOnly />
+                    <label className='addlabel'>Name</label>
+                    <input className='addvalue' type='text' value={name} onChange={e => setName(e.target.value)} />
                 </div>
                 <div className='addressInfoItem'>
-                    <label className='addlabel' >Address</label>
-                    <input className='addvalue' type='text' id='address'  placeholder='Neelamkavil House, Near R C Church' readOnly />
+                    <label className='addlabel'>Address</label>
+                    <input className='addvalue' type='text' value={address} onChange={e => setAddress(e.target.value)} />
                 </div>
                 <div className='addressInfoItem'>
-                    <label className='addlabel' >Pincode</label>
-                    <input className='addvalue' type='text' id='pincode'  placeholder='680507' readOnly />
+                    <label className='addlabel'>Pincode</label>
+                    <input className='addvalue' type='text' value={pincode} onChange={e => setPincode(e.target.value)} />
                 </div>
                 <div className='addressInfoItem'>
-                    <label className='addlabel' >Phone Number</label>
-                    <input className='addvalue' type='text' id='phoneNumber'  placeholder='9400743624' readOnly />
+                    <label className='addlabel'>Phone Number</label>
+                    <input className='addvalue' type='text' value={phonenumber} onChange={e => setPhonenumber(e.target.value)} />
                 </div>
+                <button className='orderbtn' type="submit">
+                    Continue
+                </button>
             </form>
-            <Link to = "/checkout" >
-            <button className='orderbtn' type="submit" >
-                        Continue
-            </button>
-            </Link>
-                            
-
             <Navbar/>
-            
         </div>
     );
 }

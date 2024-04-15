@@ -2,14 +2,12 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Header, Navbar } from '../../components';
 import { Rating } from 'react-simple-star-rating';
-import { Link, useLocation, useParams, useNavigate } from 'react-router-dom';
-import {} from 'react-router-dom';
+import { useParams } from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import { API_ENDPOINTS } from '../../components/Auth/apiConfig';  
 
 import './Expandpage.css';
 
-import product from '../../Images/product.png';
-import farmer from '../../Images/farmerphoto.png';
 
 function Expandpage() {
     // Counter
