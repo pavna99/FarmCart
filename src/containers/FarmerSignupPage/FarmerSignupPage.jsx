@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import './SignupPage.css'
+import './FarmerSignupPage.css'
 
-function SignupPage() {
+function FarmerSignupPage() {
   return (
     <div className='signup-login-page-container'>
       <div className='header-section'>
@@ -19,7 +19,9 @@ function SignupPage() {
         <input className='inputfield' type="password" name="password" placeholder="Enter Your Password" required /><br></br>
         <label className='labelstyles'>Re-Type Password</label><br></br>
         <input className='inputfield' type="password" name="password" placeholder="Re-Type Your Password" required /><br></br>
-        
+        <input classname='labelstyles' type="checkbox" name="checkbox"/>
+        <label classname='labelstyles'>Sign up myself as a farmer</label><br></br>
+
         <Link to="/location">
           <input className='submitbtn' type="submit" value="Sign Up" />
         </Link>
@@ -30,4 +32,4 @@ function SignupPage() {
   )
 }
 
-export default SignupPage
+export default FarmerSignupPage
