@@ -72,31 +72,9 @@ function farmerdashboard(props) {
         </div>
       </Link>
       <div className="topproduct">Top selling product</div>
-      <BarChart
-        xAxis={[
-          {
-            id: "barCategories",
-            data: ["11", "12", "13"],
-            scaleType: "band",
-          },
-        ]}
-        series={[
-          {
-            data: [2, 5, 3],
-          },
-        ]}
-        margin={{
-          left: 21,
-          right: 0,
-          top: 59,
-          bottom: 59,
-        }}
-        width={100}
-        height={200}
-      />
-
+        
       <Saleschart />
-      <h2>ngrvrb</h2>
+      
       <FarmerNavbar />
     </div>
   );
