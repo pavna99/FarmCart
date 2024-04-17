@@ -56,16 +56,16 @@ function SignupPage() {
       </div>
       <div className='form-container'>
         <form onSubmit={handleSubmit} method="POST"> 
-        <label className='labelstyles' style={{'marginTop':10}}>Name</label><br></br>
-        <input className='inputfield' type="text" name="username" value={data.username} onChange={handleChange} placeholder="Enter Your Name" required /><br></br>
-        <label className='labelstyles'>Email</label><br></br>
-        <input className='inputfield' type="email" name="email" value={data.email} onChange={handleChange}  placeholder="Enter Your Email" required /><br></br>
-        <label className='labelstyles'>Password</label><br></br>
-        <input className='inputfield' type="password" name="password1" value={data.password1} onChange={handleChange}  placeholder="Enter Your Password" required /><br></br>
-        <label className='labelstyles'>Re-Type Password</label><br></br>
-        <input className='inputfield' type="password" name="password2" value={data.password2} onChange={handleChange}  placeholder="Re-Type Your Password" required /><br></br>
-        {error && <div>{error}</div>}
-        <button className='submitbtn' type="submit" >Sign Up</button>
+          <label className='labelstyles' style={{'marginTop':10}}>Name</label><br></br>
+          <input className='inputfield' type="text" name="username" value={data.username} onChange={handleChange} placeholder="Enter Your Name" required /><br></br>
+          <label className='labelstyles'>Email</label><br></br>
+          <input className='inputfield' type="email" name="email" value={data.email} onChange={handleChange}  placeholder="Enter Your Email" required /><br></br>
+          <label className='labelstyles'>Password</label><br></br>
+          <input className='inputfield' type="password" name="password1" value={data.password1} onChange={handleChange}  placeholder="Enter Your Password" required /><br></br>
+          <label className='labelstyles'>Re-Type Password</label><br></br>
+          <input className='inputfield' type="password" name="password2" value={data.password2} onChange={handleChange}   placeholder="Re-Type Your Password" required /><br></br>
+          {error && <div>{error}</div>} 
+          <button className='submitbtn' type="submit">Sign Up</button>
         </form>
         <p style={{'fontSize':'medium', 'fontWeight':'300', 'textAlign':'center'}}>Already have an account? <Link to='/login'>login instead.</Link></p>
         {showNotification && <NotificationPopup message="User created please login" onClose={() => setShowNotification(false)} />}</div>

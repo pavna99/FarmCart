@@ -1,11 +1,11 @@
 import React, { useState, useEffect }  from 'react';
 import './CartPage.css';
-import { Header, Navbar} from '../../components';
+import { Header, Navbar, EmptyCart} from '../../components';
 import { Link } from 'react-router-dom';
 import cart from '../../Images/shopping-cart.svg';
 import bar from '../../Images/Bar.png';
 import product from '../../Images/listone.png';
-import { API_ENDPOINTS } from '../../components/Auth/apiConfig';  
+import { API_ENDPOINTS} from '../../components/Auth/apiConfig';  
 
 
 function CartPage(props) {
@@ -66,6 +66,11 @@ function CartPage(props) {
         fetchCartItems();
       }, [refreshCart]);
       console.log(cartItems)
+
+      if (cartItems.length === 0) {
+        return <div><EmptyCart /></div>;
+      }
+
       if (isLoading) {
         return <div>Loading cart items...</div>;
       }

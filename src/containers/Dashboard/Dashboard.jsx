@@ -1,7 +1,7 @@
 import React from 'react';
 import './dashboard.css';
 import '@fortawesome/fontawesome-free/css/all.css';
-import { Navbar,DashboardComponent,ProductComponent} from '../../components'
+import { Navbar,DashboardComponent, Header} from '../../components'
 // import  {useState} from 'react'
 import cart from '../../Images/shopping-cart.svg';
 import bar from '../../Images/logo.png'
@@ -28,7 +28,6 @@ function Dashboard() {
           
       </div>
       </Link>
-      
       <DashboardComponent/>
       <Navbar/>
       </div>
