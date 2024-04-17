@@ -77,7 +77,10 @@ function CartPage(props) {
       
     return (
         <div className='cart-overall-container'>
-            <Header/>
+             <div className='header1'>
+        <img className='logoimage' src={bar} alt="bars"/>
+        <img className='images1' src={cart} alt="cart"/>
+      </div>
             <div  className='cartlist'>
                 {cartItems.map((item,index) => (
                     <div id={`deleteBtn-${item.cart_id}`} className='listitem'>

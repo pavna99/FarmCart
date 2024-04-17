@@ -4,7 +4,7 @@ import '@fortawesome/fontawesome-free/css/all.css';
 import { Navbar,DashboardComponent,ProductComponent} from '../../components'
 // import  {useState} from 'react'
 import cart from '../../Images/shopping-cart.svg';
-import bar from '../../Images/Bar.png';
+import bar from '../../Images/logo.png'
 import { Link } from 'react-router-dom';
 
 
@@ -12,7 +12,7 @@ function Dashboard() {
   return (
     <div className='dashboard-overall-container'>
       <div className='header1'>
-        <img className='images1' src={bar} alt="bars"/>
+        <img className='logoimage' src={bar} alt="bars"/>
         <img className='images1' src={cart} alt="cart"/>
       </div>
       

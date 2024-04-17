@@ -5,7 +5,7 @@ import './ChatPage.css';
 import { Header, Navbar} from '../../components';
 import bot from '../../Images/smalllogo.png';
 import { Link } from 'react-router-dom';
-import bar from '../../Images/Bar.png'
+import bar from '../../Images/smalllogo.png'
 
 function ChatPage() {
   const [query, setQuery] = useState('');
