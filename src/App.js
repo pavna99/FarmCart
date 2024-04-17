@@ -2,6 +2,7 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { IntroPage, LoadingPage, SignupPage,LocationPage, LoginPage, Dashboard,Seemore, Search,Expandpage,FarmerSignupPage} from './containers';
 
 
@@ -23,6 +24,9 @@ const App = () => {
     </Router>
 =======
 import { IntroPage, LoadingPage, SignupPage,LocationPage, LoginPage, Dashboard, Seemore, SearchPage, Expandpage, EmptyCart, CartPage,CheckoutPage, AddressPage,Checkout, Orderplace ,Notification, EmptyNotification, ChatPage, Profile, FarmerDashboard, ProductDetail} from './containers';
+=======
+import { IntroPage, LoadingPage, SignupPage,LocationPage, LoginPage, Dashboard, Seemore, SearchPage, Expandpage, EmptyCart, CartPage,CheckoutPage, AddressPage,Checkout, Orderplace ,Notification, EmptyNotification, ChatPage, Profile, FarmerDashboard, ProductDetail, FarmChat} from './containers';
+>>>>>>> f92a57793f8289a6743d982491feb93179563aca
 import { AuthProvider } from './components/Auth/AuthContext';
 
 const App = () => {
@@ -51,6 +55,7 @@ const App = () => {
           <Route path="/chat" exact element={<ChatPage/>} />
           <Route path="/farmdash" exact element={<FarmerDashboard/>}/>
           <Route path="/addproduct" exact element={<ProductDetail/>}/>
+          <Route path="/farmchat" exact element={<FarmChat/>}/>
         </Routes>
       </Router>
     </AuthProvider>
