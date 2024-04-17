@@ -3,6 +3,7 @@
     background-color: #F6F5F5;
     justify-content: center;
     align-items: center;
+    max-width: 450px;
 }
 .emptycart-container{
     display: flex;
@@ -31,6 +32,7 @@
     border-radius: 30px;
     background: #0BCE83;
     width: 80%;
+    max-width: 400px;
     height: 70px;
     border: none;
 

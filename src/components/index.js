@@ -6,4 +6,5 @@ export {default as SearchBar} from './SearchBar/SearchBar';
 export {default as Header} from './Header/Header';
 export {default as FarmerNavbar} from './Farmer-Navbar/farmer_navbar';
 export {default as NavigationButton} from './NavigationButton/NavigationButton';
+export {default as EmptyCart} from './EmptyCart/EmptyCart';
 
