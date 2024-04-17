@@ -1,7 +1,7 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { IntroPage, LoadingPage, SignupPage,LocationPage, LoginPage, Dashboard, Seemore, SearchPage, Expandpage, EmptyCart, CartPage,CheckoutPage, AddressPage,Checkout, Orderplace ,Notification, EmptyNotification, ChatPage, Profile, FarmerDashboard} from './containers';
+import { IntroPage, LoadingPage, SignupPage,LocationPage, LoginPage, Dashboard, Seemore, SearchPage, Expandpage, EmptyCart, CartPage,CheckoutPage, AddressPage,Checkout, Orderplace ,Notification, EmptyNotification, ChatPage, Profile, FarmerDashboard, ProductDetail} from './containers';
 import { AuthProvider } from './components/Auth/AuthContext';
 
 const App = () => {
@@ -29,6 +29,7 @@ const App = () => {
           <Route path="/nonotification" exact element={<EmptyNotification/>}/>
           <Route path="/chat" exact element={<ChatPage/>} />
           <Route path="/farmdash" exact element={<FarmerDashboard/>}/>
+          <Route path="/addproduct" exact element={<ProductDetail/>}/>
         </Routes>
       </Router>
     </AuthProvider>

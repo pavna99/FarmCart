@@ -18,3 +18,4 @@ export {default as EmptyNotification} from './EmptyNotification/EmptyNotificatio
 export {default as ChatPage} from './ChatPage/ChatPage';
 export {default as Profile} from './ProfilePage/ProfilePage';
 export {default as FarmerDashboard} from './farmer-Dashboard/farmerdashboard';
+export {default as ProductDetail} from './farmer-AddProduct/Addproduct';
