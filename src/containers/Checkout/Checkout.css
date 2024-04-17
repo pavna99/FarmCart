@@ -1,0 +1,315 @@
+
+.checkout-overall-container{
+    height: 100vh;
+    background-color: #F6F5F5;
+    justify-content: center;
+    align-items: center;
+    
+}.Address {
+    width: 280px;
+    margin-top: 8px;
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+    border: 1px solid #EBEBEB;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    display: inline-flex;
+  }
+  
+  .AddressSelected {
+    width: 280px;
+    margin-top: 8px;
+    padding: 20px;
+    background: #F5EDFF;
+    border-radius: 20px;
+    border: 1px solid #7519EB;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 8px;
+    display: inline-flex;
+  }
+  .numberselect {
+    width: 258px;
+    height: 19px;
+    
+    font-size: 13px;
+    font-family: 'SF Pro Rounded';
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+  .numbernoselect {
+    width: 258px;
+    height: 19px;
+    color: #888888;
+    font-size: 13px;
+    font-family: 'SF Pro Rounded';
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+  
+  /* Add other styles for selected state */
+  .Selected {
+    background-color: #F5EDFF;
+  }
+  
+  
+  
+  .HomeAddress.Selected {
+    color: #7519EB;
+  }
+  .OfficeAddress.Selected {
+    color: #7519EB;
+  }
+  
+  .numberselect.Selected {
+    color: #7519EB;
+  }
+  .HomeAddress {
+    width: 233px;
+    height: 19px;
+    color: #212529;
+    font-size: 14px;
+    font-family: 'SF Pro Rounded';
+    font-weight: 700;
+    word-wrap: break-word;
+  }
+  
+  .OfficeAddress {
+    width: 233px;
+    height: 19px;
+    color: #212529;
+    font-size: 14px;
+    font-family: 'SF Pro Rounded';
+    font-weight: 700;
+    word-wrap: break-word;
+  }
+  
+  .Neelamkavil{
+    width: 250px;
+    color: #615D5D;
+    font-size: 13px;
+    font-family: 'SF Pro Rounded';
+    font-weight: 400;
+    line-height: 16px;
+    word-wrap: break-word;
+  }
+  .Frame11 {
+    justify-content: flex-start;
+    align-items: center;
+    gap: 9px;
+    display: inline-flex;
+  }
+  .Frame10 {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2px;
+    display: flex;
+  }
+  .EnricSNeelamkavil {
+    width: 258px;
+    height: 19px;
+    color: #212529;
+    font-size: 16px;
+    font-family: 'SF Pro Rounded';
+    font-weight: 700;
+    word-wrap: break-word;
+  }
+  .Sanjos
+   {
+    width: 226px;
+    color: #615D5D;
+    font-size: 13px;
+    font-family: 'SF Pro Rounded';
+    font-weight: 400;
+    line-height: 16px;
+    word-wrap: break-word;
+  } 
+
+  .dottedline2{
+      
+      margin-bottom: 5px;
+  }
+  .container2 {
+      width:300px;
+      padding: 19.01px;
+      background: white;
+      border-radius: 20px;
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      
+    }
+    
+    .titleContainer2 {
+      width: 314px;
+      display: inline-flex;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    
+    .title2 {
+      width: 159.22px;
+      color: #7519EB;
+      font-size: 13.31px;
+      font-family: 'SF Pro Rounded';
+      font-weight: 700;
+      word-wrap: break-word;
+    }
+    
+    .detailsContainer2 {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 11.41px;
+      display: flex;
+    }
+    
+    .rowContainer2 {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 2px;
+      display: flex;
+    }
+    
+    .row2 {
+      justify-content: flex-start;
+      align-items: flex-start;
+      display: inline-flex;
+    }
+    
+    .label2 {
+      width: 159.22px;
+      color: #615D5D;
+      font-size: 12.36px;
+      font-family: 'SF Pro Rounded';
+      font-weight: 400;
+      line-height: 20.91px;
+      word-wrap: break-word;
+    }
+    
+    .value2 {
+      width: 159.22px;
+      text-align: right;
+      color: #615D5D;
+      font-size: 12.36px;
+      font-family: 'SF Pro Rounded';
+      font-weight: 400;
+      line-height: 20.91px;
+      word-wrap: break-word;
+    }
+    
+    .separator2 {
+      width: 318.43px;
+      height: 0;
+      border: 0.95px #615D5D dotted;
+    }
+    
+    .totalLabel2 {
+      width: 159.22px;
+      color: #212529;
+      font-size: 12.36px;
+      font-family: 'SF Pro Rounded';
+      font-weight: 700;
+      line-height: 20.91px;
+      word-wrap: break-word;
+    }
+    
+    .totalValue2 {
+      width: 159.22px;
+      text-align: right;
+      color: #212529;
+      font-size: 13.31px;
+      font-family: 'SF Pro Rounded';
+      font-weight: 700;
+      line-height: 20.91px;
+      word-wrap: break-word;
+    }
+    .secondContainer2 {
+      width: 300px;
+      margin-top: 10px;
+      padding-left: 20.12px;
+      padding-right: 20.12px;
+      padding-top: 10.06px;
+      padding-bottom: 10.06px;
+      background: white;
+      border-radius: 15px;
+      display: inline-flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 18.10px;
+    }
+    
+    .secondIconContainer2 {
+      width: 15px;
+      height: 15px;
+      position: relative;
+    }
+    
+    .secondIcon2 {
+      width: 15px;
+      height: 15px;
+      left: 0;
+      top: 0;
+      position: absolute;
+      
+    }
+    
+    .secondContentContainer2 {
+      flex: 1 1 0;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      display: inline-flex;
+    }
+    
+    .secondTitle2 {
+      color: #212529;
+      font-size: 12px;
+      font-family: 'SF Pro Rounded';
+      font-weight: 700;
+      word-wrap: break-word;
+    }
+    
+    .secondDescription2 {
+      width: 247.43px;
+      color: #615D5D;
+      font-size: 10.06px;
+      font-family: 'SF Pro Rounded';
+      font-weight: 500;
+      line-height: 14.08px;
+      word-wrap: break-word;
+    }
+    
+    .orderbtn2 {
+      display: flex;
+      margin-top: 25px;
+      bottom: 100px; 
+      color: #FFF;
+      font-size: 15.448px;
+      font-style: normal;
+      font-weight: 600;
+      margin-left: 40px;
+      border-radius: 30px;
+      background:#0BCE83;
+      width: 80%;
+      height: 70px;
+      border: none;
+      align-items: center;
+      justify-content: center;
+  
+    }
+    
+    .bagicon{
+        
+        padding-right: 3%;
+        
+    }
+    

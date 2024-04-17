@@ -1,0 +1,12 @@
+.emptynoti{
+    text-align: center;
+    display: flex;
+    width:100%;
+    height:100vh;
+    align-items: center;
+    justify-content: center;
+}
+.no-notification-overall{
+    text-align: center;
+    
+}

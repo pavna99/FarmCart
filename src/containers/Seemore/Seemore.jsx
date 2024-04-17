@@ -1,46 +1,46 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Seemore.css';
-import cart from '../../Images/shopping-cart.svg';
+import axios from 'axios';
 import bar from '../../Images/Bar.png';
-import { Navbar,ProductComponent} from '../../components'
+import { Link } from 'react-router-dom';
+import cart from '../../Images/shopping-cart.svg';
+import { API_ENDPOINTS } from '../../components/Auth/apiConfig';  
+import { Navbar,ProductComponent, SearchBar} from '../../components'
+
+
 function Seemore(props) {
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        axios.get(`${API_ENDPOINTS.product}/productlist/`)
+            .then(response => {
+                const productList = response.data;
+                setProducts(productList);
+            })
+            .catch(error => {
+                console.error('Error fetching the data:', error);
+            });
+    }, []); 
+
     return (
         <div className='seemore-overall-container'>
             <div className='header2'>
                 <img className='images1' src={bar} alt="bars"/>
-                <div class = 'search-box2'>
-                    <div class = "search-btn2">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <input class = "search-text2" type="text" placeholder = "Search" />
-            
-                </div>
+                <SearchBar/>
                 <img className='images2' src={cart} alt="cart"/>
             </div>
             <div className='Productlist'>
                     <div className='Productcompset2'>
-                        <div className='Productbox'>
-                            <ProductComponent/>
-                        </div>
-                        <div className='Productbox'>
-                            <ProductComponent/>
-                        </div>
-                    </div>
-                    <div className='Productcompset2'>
-                        <div className='Productbox'>
-                            <ProductComponent/>
-                        </div>
-                        <div className='Productbox'>
-                            <ProductComponent/>
-                        </div>
-                    </div>
-                    <div className='Productcompset2'>
-                        <div className='Productbox'>
-                            <ProductComponent/>
-                        </div>
-                        <div className='Productbox'>
-                            <ProductComponent/>
-                        </div>
+                        {products.map((item,index)=>
+                            <div className='Productbox'>
+                                <ProductComponent
+                                    id = {item.product_id}
+                                    name={item.product_name}
+                                    price={item.price}
+                                    image={item.product_image}
+                                    altText={`${item.product_name} image`}/>
+                            </div>
+                        )}
                     </div>
             </div>
             <Navbar/>

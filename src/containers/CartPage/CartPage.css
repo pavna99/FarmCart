@@ -1,0 +1,91 @@
+.cart-overall-container{
+    height: 100vh;
+    background-color: #F6F5F5;
+    justify-content: center;
+    align-items: center;
+}
+.cartlist{
+    padding:3% 3% 3% 3%;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.proimage{
+    width:130px;
+    height: 100px;
+    object-fit: cover;
+}
+.listitem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;    
+}
+.listitem2{
+    display: flex;
+    margin-top: 40px;
+}
+
+.itemdetails{
+    width: 200px;
+}
+.itemname{
+    font-size:larger;
+    font-weight: 700;
+}
+.itemprice{
+    margin-top: 8px;
+    color:#0BCE83;
+}
+.deletebtn{
+    margin-top: 5px;
+    margin-left: 65px;
+    width: fit-content;
+    border: 0;
+}
+.quantitydesc{
+    color:#888;
+    margin-top: 8px;
+
+}
+.btn__container{
+   margin-top: 50px;
+   display: flex;
+   align-items: center;
+}
+
+.control__btn {
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size:larger;
+    background: #FFF;
+    margin-left: 10px;
+    margin-right: 10px;
+    box-shadow: 0.865px 1.73px 12.972px 0px rgba(32, 31, 32, 0.05);
+  }
+.checkbtn{
+    
+        position: fixed;
+        bottom: 100px; 
+        color: #FFF;
+        font-size: 15.448px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        border-radius: 30px;
+        background: #0BCE83;
+        width: 80%;
+        max-width: 450px;
+        height: 70px;
+        border: none;
+        margin-left: 10%;
+    
+}
+.rightbtns{
+    float: right;
+}

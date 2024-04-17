@@ -38,8 +38,9 @@
     color: #FFFFFF;
     font-weight: bold;
     background-color: #0BCE83;
-    padding: 20px;
+    padding: 20px 20%;
     border-radius: 30px;
+    border: none;
 }
 .Nomessage{
     color:#0BCE83;

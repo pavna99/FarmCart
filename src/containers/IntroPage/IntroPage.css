@@ -37,8 +37,8 @@
   color:  #7519EB;
 }
 
-.title{
-  padding: 10px;
+.slidetitle{
+  padding: 20px 0;
   color:#7519EB;
   z-index: 3; 
 }
@@ -46,9 +46,9 @@
 .popupdiv {
   position: absolute;
   height: 40%;
-  width: 100%;
+  width: 80%;
   margin: 0;
-  padding: 0;
+  padding: 20px 10%;
   background-color: #f1f1f1;
   box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.3);
   animation: none;
@@ -78,7 +78,7 @@
   background-color: #7519EB; 
 }
 .slidetext{
-  
+  text-align: justify;
 }
 .animate {
   animation: slideUp 1s forwards;
