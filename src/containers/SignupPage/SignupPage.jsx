@@ -63,9 +63,17 @@ function SignupPage() {
         <label className='labelstyles'>Password</label><br></br>
         <input className='inputfield' type="password" name="password1" value={data.password1} onChange={handleChange}  placeholder="Enter Your Password" required /><br></br>
         <label className='labelstyles'>Re-Type Password</label><br></br>
+<<<<<<< HEAD
+        <input className='inputfield' type="password" name="password" placeholder="Re-Type Your Password" required /><br></br>
+        
+        <Link to="/location">
+          <input className='submitbtn' type="submit" value="Sign Up" />
+        </Link>
+=======
         <input className='inputfield' type="password" name="password2" value={data.password2} onChange={handleChange}  placeholder="Re-Type Your Password" required /><br></br>
         {error && <div>{error}</div>}
         <button className='submitbtn' type="submit" >Sign Up</button>
+>>>>>>> 61d344d00d8f249f59f57926769d1cb8ae4cd048
         </form>
         <p style={{'fontSize':'medium', 'fontWeight':'300', 'textAlign':'center'}}>Already have an account? <Link to='/login'>login instead.</Link></p>
         {showNotification && <NotificationPopup message="User created please login" onClose={() => setShowNotification(false)} />}</div>
