@@ -21,3 +21,4 @@ export {default as FarmerDashboard} from './farmer-Dashboard/farmerdashboard';
 export {default as ProductDetail} from './farmer-AddProduct/Addproduct';
 export {default as FarmChat} from './farmer-ChatPage/ChatPage';
 export {default as Wishlist} from './Wishlist/Wishlist';
+export {default as Orders} from './Orders/Orders';

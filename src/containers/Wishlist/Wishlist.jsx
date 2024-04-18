@@ -14,6 +14,7 @@ function Wishlist(props) {
         <img className='logoimage' src={bar} alt="bars"/>
         <img className='images1' src={cart} alt="cart"/>
       </div>
+      <div className='orderstitle'>My wishlist</div>
             <div  className='cartlist'>
                 
                     <div  className='listitem'>

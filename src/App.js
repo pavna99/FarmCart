@@ -2,7 +2,7 @@ import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import { IntroPage, LoadingPage, SignupPage,LocationPage, LoginPage, Dashboard, Seemore, SearchPage, Expandpage, EmptyCart, CartPage,CheckoutPage, AddressPage,Checkout, Orderplace ,Notification, EmptyNotification, ChatPage, Profile, FarmerDashboard, ProductDetail, FarmChat, Wishlist, FarmerSignupPage} from './containers';
+import { IntroPage, LoadingPage, SignupPage,LocationPage, LoginPage, Dashboard, Seemore, SearchPage, Expandpage, EmptyCart, CartPage,CheckoutPage, AddressPage,Checkout, Orderplace ,Notification, EmptyNotification, ChatPage, Profile, FarmerDashboard, ProductDetail, FarmChat, Wishlist, FarmerSignupPage, Orders} from './containers';
 
 
 import { AuthProvider } from './components/Auth/AuthContext';
@@ -34,6 +34,7 @@ const App = () => {
           <Route path="/farmdash" exact element={<FarmerDashboard/>}/>
           <Route path="/addproduct" exact element={<ProductDetail/>}/>
           <Route path="/farmchat" exact element={<FarmChat/>}/>
+          <Route path="/orders" exact element={<Orders/>}/>
           <Route path="/Farmersignup" exact element={<FarmerSignupPage />} />
 
         </Routes>
