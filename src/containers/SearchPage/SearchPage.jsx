@@ -8,7 +8,7 @@ function SearchPage(props) {
     return (
         <div className='searchpage-container'>
             <div className='header2'>
-                <img className='images1' src={bar} alt="bars"/>
+            <img className='logoimage' src={bar} alt="bars"/>
                 <SearchBar/>
                 <img className='images2' src={cart} alt="cart"/>
             </div>

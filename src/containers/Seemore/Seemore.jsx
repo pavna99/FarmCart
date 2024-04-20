@@ -25,9 +25,11 @@ function Seemore(props) {
     return (
         <div className='seemore-overall-container'>
             <div className='header2'>
-                <img className='images1' src={bar} alt="bars"/>
+            <img className='logoimage' src={bar} alt="bars"/>
                 <SearchBar/>
-                <img className='images2' src={cart} alt="cart"/>
+                <Link to="/cart">
+                <img  src={cart} alt="cart"/>
+                </Link>
             </div>
             <div className='Productlist'>
                     <div className='Productcompset2'>

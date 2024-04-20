@@ -19,7 +19,7 @@ function Expand(props) {
 
     return (
         <div className='expand-overall-container'>
-            <div className="header1" >
+        <div className="header1" >
         <img className="logoimage" src={bar} alt="bars" />
         <Link to="/farmnotification">
           <svg
